@@ -6,7 +6,7 @@ site_url: https://ajlab-gh.github.io/xperts-docs-demo
 site_author: Alex Jammes
 
 repo_name: "AJLab-GH/docs-template"
-repo_url: "https://ajlab-gh.github.io/xperts-docs-demo/"
+repo_url: "https://github.com/ajlab-gh/xperts-docs-demo"
 edit_uri: "edit/main/docs/"
 
 theme:
