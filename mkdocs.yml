@@ -7,7 +7,7 @@ site_author: Alex Jammes
 
 repo_name: "AJLab-GH/docs-template"
 repo_url: "https://ajlab-gh.github.io/xperts-docs-demo/"
-edit_uri: edit/main/docs/
+edit_uri: "edit/main/docs/"
 
 theme:
   name: material
