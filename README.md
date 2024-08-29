@@ -1,99 +1,103 @@
-# Docs Template
+# Hands-On Lab Guide: GitHub Collaboration Trial
+
+Welcome to the GitHub collaboration trial! This repository serves as a practice ground for learning how to collaborate effectively in GitHub by working with Markdown files.
+
+## Objective
+
+Your goal is to identify typos or errors in the generated HTML documentation served through a [Gist](https://ajlab-gh.github.io/xperts-docs-demo), then locate the corresponding Markdown file in the repository, make corrections, and see your updates reflected in the HTML.
 
 ## Getting Started
 
-Follow these steps to quickly set up and start working on this project:
+### 1. Clone the Repository
 
-1. **Fork the Repository**:
-   - Begin by [forking this repository](https://github.com/AJLab-GH/docs-templates/fork) to your GitHub account.
+Before making any changes, you need to clone the repository to your local machine.
 
-2. **Clone the Repository**:
-   - Clone your forked repository to your local machine:
+1. **Open a terminal** on your computer.
+2. **Clone the repository** by running the following command:
 
-     ```bash
-     git clone https://github.com/YOUR_USERNAME/docs-templates.git
-     cd docs-templates
-     ```
+   ```bash
+   git clone https://github.com/ajlab-gh/xperts-docs-demo
+   ```
 
-3. **Configure GitHub Pages**:
-   - In your `docs-templates` repository settings, go to **Actions -> Pages**.
-   - Set the **Build and Deployment** source to `Deploy from a branch`.
-   - Choose the `gh-pages` branch and set the folder to **/(root)**.
-   - **Save** your changes.
+3. **Navigate to the repository folder**:
 
-     ![GitHub Actions Page Permissions](https://raw.githubusercontent.com/ajlab-gh/docs-template/main/images/page-permissions.PNG)
+   ```bash
+   cd xperts-docs-demo
+   ```
 
-4. **Configure Gist**:
-   - In the repository's **About** section, click the **Settings** gear icon.
+### 2. View the Documentation in the Gist
 
-     ![About Section Settings](https://raw.githubusercontent.com/ajlab-gh/docs-template/main/images/about-setting1.png)
+1. **Navigate to the Gist**:
+   - [Link to the Gist](https://ajlab-gh.github.io/xperts-docs-demo)
 
-   - Enable the `Use your GitHub Pages Website` option and **Save** the changes.
+2. **Identify a Typo or Error**:
+   - Browse through the pages and sections in the gist.
+   - Take note of any typos or errors you find and their locations.
 
-     ![About Section Gist](https://raw.githubusercontent.com/ajlab-gh/docs-template/main/images/about-setting2.png)
+![Typos and Typo Location](https://raw.githubusercontent.com/ajlab-gh/docs-template/main/images/typo.png)
 
-5. **Customize Markdown Files**:
-   - The `actions` and `pages` in this template are set up to build your gist based on the structure defined in `mkdocs.yml` under the `nav` section.
+### 3. Locate the Corresponding Markdown File
 
-     ```yaml
-     nav:
-       - Home:
-           - page-0.md
-       - Section 1:
-           - page-1.md
-       - Section 2:
-           - page-2.md
-     ```
+1. **Navigate to the MkDocs Navigation File**:
+   - Open `mkdocs.yml` in the repository to locate the `nav` section.
+   - Match the page/section where you found the typo with the corresponding `.md` file listed under `nav`.
+  
+     ![Locating the file with Nav](https://raw.githubusercontent.com/ajlab-gh/docs-template/main/images/nav.png)
 
-   - The `nav` section is where you define the structure of your documentation site. You can create nested pages to organize your content into sections and subsections, providing a clear hierarchy for users to navigate. For example, to add nested subsections within a section, your `nav` might look like this:
+2. **Open the Markdown File**:
+   - Once you've identified the correct `.md` file, open it in your text editor.
+     ![Open Relevant MD File](https://raw.githubusercontent.com/ajlab-gh/docs-template/main/images/vscode_md_file.png)
 
-     ```yaml
-     nav:
-       - Home: page-0.md
-       - Section 1: page-1.md
-       - Section 2: page-2.md
-       - Section 3:
-           - Overview: section-3/overview.md
-           - Details:
-               - Subsection 1: section-3/details/subsection-1.md
-               - Subsection 2: section-3/details/subsection-2.md
-     ```
+### 4. Edit the Markdown File
 
-   - In this example:
-     - `Section 3` contains an `Overview` page and a `Details` section with two subsections.
-     - Each entry under `nav` corresponds to a markdown file that you have created in the `docs/` directory.
-     - You can rename sections, subsections, and pages as needed to match your documentation structure.
+1. **Make the Necessary Changes**:
+   - Correct the typo or error in the `.md` file.
 
-   - Rename sections and corresponding markdown files as needed. Ensure the `nav` entries in `mkdocs.yml` match your markdown file names.
+### 5. Commit, Pull, and Push Changes
 
-   - After editing or adding markdown files, commit and push your changes:
+After editing the file, you need to commit your changes, ensure your branch is up to date with any changes other contributors have made, and then push your changes to the remote repository.
 
-     ```bash
-     git add .
-     git commit -m "<describe your changes>"
-     git push origin main
-     ```
+1. **Add the changes** to the staging area:
 
-   - Navigate to your Gist and see your finished product!
+   ```bash
+   git add .
+   ```
 
-     ![gist](https://raw.githubusercontent.com/ajlab-gh/docs-template/main/images/gist-page.PNG)
+   - The `git add .` command stages all the changes you've made, preparing them for commit.
 
-## Workflow Overview
+2. **Commit the changes** with a message:
 
-The workflow includes the following stages:
+   ```bash
+   git commit -m "Fix typo in <filename>.md"
+   ```
 
-1. **Checkout Repository**: Retrieves the latest version of the repository using the `actions/checkout` action.
-2. **Configure GitHub Pages**: Sets up GitHub Pages to deploy the documentation.
-3. **Install Python and MkDocs**: Installs Python 3.x and required MkDocs plugins.
-4. **Build Docs**: Runs `mkdocs gh-deploy` to build and deploy the documentation to GitHub Pages.
-5. **Triggering the Workflow**: Automatically triggers when changes are pushed to the `main` branch or when a pull request is created, ensuring the documentation is always current.
+   - The `git commit` command saves your changes locally with a message explaining what was done.
 
-### Concurrent Builds
+3. **Pull the latest changes** from the remote repository to ensure your local repository is up to date:
 
-GitHub Actions' concurrency feature is used to ensure only one build runs at a time. If multiple pushes occur, subsequent builds will wait until the previous one finishes.
+   ```bash
+   git pull origin main
+   ```
 
-### Permissions
+   - The `git pull` command fetches and merges changes from the remote `main` branch into your local branch. This step ensures that any changes made by other contributors are incorporated into your local repository before pushing your own changes.
 
-The workflow has write permissions for `contents`, `pages`, and `id-token`, allowing it to create and update files as needed.
+   - If there are any conflicts between your changes and those pulled from the remote repository, resolve them before proceeding.
 
-Using GitHub Actions to automate the documentation process ensures it is always up-to-date, reliable, and easily accessible.
+4. **Push your changes** to the remote repository:
+
+   ```bash
+   git push origin main
+   ```
+
+   - The `git push` command uploads your local commits to the remote repository (in this case, the `main` branch).
+
+### 6. Verify Your Changes in the Gist
+
+1. **Wait for Automation to Complete:**
+   - After pushing your changes, the automation process will compile and publish the updated HTML documentation. This may take a few minutes. To make the most of this time, consider batching multiple changes in a single commit rather than pushing each change individually.
+
+2. **Navigate Back to the Gist**:
+   - [Link to the Gist](https://ajlab-gh.github.io/xperts-docs-demo)
+
+3. **Check the Page/Section**:
+   - Verify that the changes you made in the `.md` file are now correctly reflected in the HTML documentation.
