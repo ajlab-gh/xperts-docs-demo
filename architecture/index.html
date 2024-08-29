@@ -1,4 +1,65 @@
-<!doctype html><html lang=en class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="docs template for getting started"><meta name=author content="Alex Jammes"><link href=https://ajlab-gh.github.io/xperts-docs-demo/architecture/ rel=canonical><link href=../hol-fwb-lab-2/ rel=prev><link href=../bootstrap/ rel=next><link rel=icon href=../assets/images/favicon.png><meta name=generator content="mkdocs-1.6.0, mkdocs-material-9.5.33"><title>Reference Architecture - docs template</title><link rel=stylesheet href=../assets/stylesheets/main.3cba04c6.min.css><link rel=stylesheet href=../assets/stylesheets/palette.06af60db.min.css><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback"><style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style><script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script><meta property=og:type content=website><meta property=og:title content="Reference Architecture - docs template"><meta property=og:description content="docs template for getting started"><meta property=og:image content=https://ajlab-gh.github.io/xperts-docs-demo/assets/images/social/architecture.png><meta property=og:image:type content=image/png><meta property=og:image:width content=1200><meta property=og:image:height content=630><meta content=https://ajlab-gh.github.io/xperts-docs-demo/architecture/ property=og:url><meta name=twitter:card content=summary_large_image><meta name=twitter:title content="Reference Architecture - docs template"><meta name=twitter:description content="docs template for getting started"><meta name=twitter:image content=https://ajlab-gh.github.io/xperts-docs-demo/assets/images/social/architecture.png><link href=../assets/stylesheets/glightbox.min.css rel=stylesheet><style>
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Using XPERTS 2023 Lab Guide to Demo User Contributions and Edits">
+      
+      
+        <meta name="author" content="Alex Jammes">
+      
+      
+        <link rel="canonical" href="https://ajlab-gh.github.io/xperts-docs-demo/architecture/">
+      
+      
+        <link rel="prev" href="../hol-fwb-lab-2/">
+      
+      
+        <link rel="next" href="../bootstrap/">
+      
+      
+      <link rel="icon" href="../img/fortinet.svg">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
+    
+    
+      
+        <title>Reference Architecture - XPERTS Academy - Cloud (Lab Guide Demo)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -7,7 +68,1143 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style><script src=../assets/javascripts/glightbox.min.js></script></head> <body dir=ltr data-md-color-scheme=default data-md-color-primary=black data-md-color-accent=grey> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#fortinet-reference-architecture-for-azure class=md-skip> Skip to content </a> </div> <div data-md-component=announce> </div> <header class=md-header data-md-component=header> <nav class="md-header__inner md-grid" aria-label=Header> <a href=.. title="docs template" class="md-header__button md-logo" aria-label="docs template" data-md-component=logo> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg> </a> <label class="md-header__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg> </label> <div class=md-header__title data-md-component=header-title> <div class=md-header__ellipsis> <div class=md-header__topic> <span class=md-ellipsis> docs template </span> </div> <div class=md-header__topic data-md-component=header-topic> <span class=md-ellipsis> Reference Architecture </span> </div> </div> </div> <form class=md-header__option data-md-component=palette> <input class=md-option data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme=default data-md-color-primary=black data-md-color-accent=grey aria-label="Switch to dark mode" type=radio name=__palette id=__palette_0> <label class="md-header__button md-icon" title="Switch to dark mode" for=__palette_1 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> </label> <input class=md-option data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme=slate data-md-color-primary=grey data-md-color-accent=black aria-label type=radio name=__palette id=__palette_1> <label class="md-header__button md-icon" title for=__palette_0 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg> </label> </form> <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script> <label class="md-header__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=Search placeholder=Search autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg> </label> <nav class=md-search__options aria-label=Search> <a href=javascript:void(0) class="md-search__icon md-icon" title=Share aria-label=Share data-clipboard data-clipboard-text data-md-component=search-share tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg> </a> <button type=reset class="md-search__icon md-icon" title=Clear aria-label=Clear tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg> </button> </nav> <div class=md-search__suggest data-md-component=search-suggest></div> </form> <div class=md-search__output> <div class=md-search__scrollwrap tabindex=0 data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> Initializing search </div> <ol class=md-search-result__list role=presentation></ol> </div> </div> </div> </div> </div> <div class=md-header__source> <a href=https://ajlab-gh.github.io/xperts-docs-demo/ title="Go to repository" class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 496 512"><!-- Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> </div> <div class=md-source__repository> AJLab-GH/docs-template </div> </a> </div> </nav> </header> <div class=md-container data-md-component=container> <nav class=md-tabs aria-label=Tabs data-md-component=tabs> <div class=md-grid> <ul class=md-tabs__list> <li class=md-tabs__item> <a href=.. class=md-tabs__link> Introduction </a> </li> <li class=md-tabs__item> <a href=../start-azure-account/ class=md-tabs__link> Getting Started </a> </li> <li class=md-tabs__item> <a href=../hol-nsg-fgt-lab-1/ class=md-tabs__link> Hands on Labs </a> </li> <li class="md-tabs__item md-tabs__item--active"> <a href=./ class=md-tabs__link> Resources </a> </li> </ul> </div> </nav> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=sidebar data-md-type=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary md-nav--lifted" aria-label=Navigation data-md-level=0> <label class=md-nav__title for=__drawer> <a href=.. title="docs template" class="md-nav__button md-logo" aria-label="docs template" data-md-component=logo> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg> </a> docs template </label> <div class=md-nav__source> <a href=https://ajlab-gh.github.io/xperts-docs-demo/ title="Go to repository" class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 496 512"><!-- Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> </div> <div class=md-source__repository> AJLab-GH/docs-template </div> </a> </div> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=.. class=md-nav__link> <span class=md-ellipsis> Introduction </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2> <label class=md-nav__link for=__nav_2 id=__nav_2_label tabindex=0> <span class=md-ellipsis> Getting Started </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_2_label aria-expanded=false> <label class=md-nav__title for=__nav_2> <span class="md-nav__icon md-icon"></span> Getting Started </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../start-azure-account/ class=md-nav__link> <span class=md-ellipsis> Accessing Your Azure Account </span> </a> </li> <li class=md-nav__item> <a href=../start-deploy/ class=md-nav__link> <span class=md-ellipsis> Deploying Your Lab Environment in Azure </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_3> <label class=md-nav__link for=__nav_3 id=__nav_3_label tabindex=0> <span class=md-ellipsis> Hands on Labs </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_3_label aria-expanded=false> <label class=md-nav__title for=__nav_3> <span class="md-nav__icon md-icon"></span> Hands on Labs </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../hol-nsg-fgt-lab-1/ class=md-nav__link> <span class=md-ellipsis> Lab 1 - Azure NSG & FortiGate </span> </a> </li> <li class=md-nav__item> <a href=../hol-fwb-lab-2/ class=md-nav__link> <span class=md-ellipsis> Lab 2 - FortiWeb </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_4 checked> <label class=md-nav__link for=__nav_4 id=__nav_4_label tabindex> <span class=md-ellipsis> Resources </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_4_label aria-expanded=true> <label class=md-nav__title for=__nav_4> <span class="md-nav__icon md-icon"></span> Resources </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" type=checkbox id=__toc> <a href=./ class="md-nav__link md-nav__link--active"> <span class=md-ellipsis> Reference Architecture </span> </a> </li> <li class=md-nav__item> <a href=../bootstrap/ class=md-nav__link> <span class=md-ellipsis> FortiWeb Bootstrap </span> </a> </li> <li class=md-nav__item> <a href=../role-play/ class=md-nav__link> <span class=md-ellipsis> Cloud Role Play </span> </a> </li> <li class=md-nav__item> <a href=../download-pdf/ class=md-nav__link> <span class=md-ellipsis> Download HoL (pdf) </span> </a> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class="md-sidebar md-sidebar--secondary" data-md-component=sidebar data-md-type=toc> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> </nav> </div> </div> </div> <div class=md-content data-md-component=content> <article class="md-content__inner md-typeset"> <a href=https://ajlab-gh.github.io/xperts-docs-demo/raw/main/docs/architecture.md title="View source of this page" class="md-content__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg> </a> <h1 id=fortinet-reference-architecture-for-azure>Fortinet Reference Architecture for Azure</h1> <h2 id=considerations-and-justifications>Considerations and Justifications</h2> <div class="admonition note"> <ul> <li> <p><strong>FortiWeb</strong> is primarily designed for web traffic, specifically HTTP/HTTPS, and offers 60+ protections including <strong>machine learning</strong> and <strong>signature-based protections</strong>.</p> </li> <li> <p><strong>FortiGate</strong> is designed for managing all other types of traffic, supporting multiple protocols, and providing <strong>application control</strong> and <strong>intrusion prevention systems</strong>.</p> </li> </ul> </div> <p>??? note "WAF Feature Comparison: FortiWeb vs. FortiGate" | Feature | FortiGate | FortiWeb | |------------------------------------------|--------------------------------------|---------------------------------------------------------| | Web App Attack Signatures | <span style=color:green>Yes</span> | <span style=color:green>Yes</span> | | WAF Signatures (FortiGuard Subscription) | <span style=color:red>No</span> | <span style=color:green>Yes</span> | | IP Reputation (FortiGuard subscription) | <span style=color:green>Yes</span> | <span style=color:green>Yes</span> | | Layer 7 DoS Protection | <span style=color:green>Yes</span> | <span style=color:green>Yes</span> (+ Bot validation) | | Machine Learning based Anomaly Detection | <span style=color:red>No</span> | <span style=color:green>Yes</span> | | Machine Learning based Bot Mitigation | <span style=color:red>No</span> | <span style=color:green>Yes</span> | | Machine Learning based API Protections | <span style=color:red>No</span> | <span style=color:green>Yes</span> | | HTTP RFC Validation | <span style=color:green>Yes</span> | <span style=color:green>Yes</span> | | API Protection | <span style=color:red>No</span> | <span style=color:green>Yes</span> | | Cookie Protection, CSRF | <span style=color:red>No</span> | <span style=color:green>Yes</span> | | Browser Security (Man-in-the-Browser) | <span style=color:red>No</span> | <span style=color:green>Yes</span> | | Syntax based detection | <span style=color:red>No</span> | <span style=color:green>Yes</span> | | Antivirus/Antimalware | <span style=color:green>Yes</span> | <span style=color:green>Yes</span> | | Web App Attack Correlation | <span style=color:red>No</span> | <span style=color:green>Yes</span> | | Web App Vulnerability Scanner | <span style=color:red>No</span> | <span style=color:green>Yes</span> | | Web Filtering | <span style=color:green>Yes</span> | <span style=color:red>No</span> | | Data Leak Prevention | <span style=color:green>Yes</span> | <span style=color:green>Yes</span> | | Attack Alert Tuning | <span style=color:red>No</span> | <span style=color:green>Yes</span> | | Web Defacement Protection | <span style=color:red>No</span> | <span style=color:green>Yes</span> | | Authentication Offload | <span style=color:green>Yes</span> | <span style=color:green>Yes</span> | | Site Publishing and SSO | SSO | <span style=color:green>Yes</span> | | PCI Compliance | <span style=color:green>Yes</span> | <span style=color:green>Yes</span> | | Dedicated WAF Throughput | <span style=color:red>No</span> | <span style=color:green>Yes</span> | | SSL Inspection | <span style=color:green>Yes</span> | <span style=color:green>Yes</span> |</p> <h2 id=fortiweb-reference-architecture>FortiWeb Reference Architecture</h2> <p>???+ note "High-Level View" <span style=color:red;>Click on the image if you want to enlarge it.</span></p> <pre><code>![](img/fwb-reference-topology.png)
-</code></pre> <p>??? note "Detailed View" <a class=glightbox href=../img/fwb-reference-topology-detail.png data-type=image data-width=auto data-height=auto data-desc-position=bottom><img alt src=../img/fwb-reference-topology-detail.png></a></p> <p>??? note "Detailed View with Routes" <a class=glightbox href=../img/fwb-reference-topology-detail-routes.png data-type=image data-width=auto data-height=auto data-desc-position=bottom><img alt src=../img/fwb-reference-topology-detail-routes.png></a></p> <p>??? note "Internet originating Non-HTTP(S) flows (i.e. SSH etc…)" <a class=glightbox href=../img/fwb-internet-originating-non-http-flows.png data-type=image data-width=auto data-height=auto data-desc-position=bottom><img alt src=../img/fwb-internet-originating-non-http-flows.png></a></p> <p>??? note "Internet originating HTTP(S) flows" <a class=glightbox href=../img/fwb-internet-originating-http-flows.png data-type=image data-width=auto data-height=auto data-desc-position=bottom><img alt src=../img/fwb-internet-originating-http-flows.png></a></p> <p>??? note "Internal originating Non-HTTP(S) flows (i.e. SSH etc…)" <a class=glightbox href=../img/fwb-internal-originating-non-http-flows.png data-type=image data-width=auto data-height=auto data-desc-position=bottom><img alt src=../img/fwb-internal-originating-non-http-flows.png></a></p> <p>??? note "Internal originating HTTP(S) flows" <a class=glightbox href=../img/fwb-internal-originating-http-flows.png data-type=image data-width=auto data-height=auto data-desc-position=bottom><img alt src=../img/fwb-internal-originating-http-flows.png></a></p> <h2 id=fortigate-reference-architecture>FortiGate Reference Architecture</h2> <h3 id=fortigate-vm-active-passive-with-fabric-connector>FortiGate-VM – Active-Passive with Fabric connector</h3> <div class="admonition example"> <p><strong>Strengths</strong></p> <ul> <li>Failover of existing connections</li> <li>Support of non-TCP/UDP protocols (e.g. ESP, ICMP)</li> <li>Source IP of connections that ingress from the Internet is not modified</li> </ul> <p><strong>Weaknesses</strong></p> <ul> <li>Failover time is dependent on Azure API response time and can vary from approximately 45 seconds to up to more than 2 minutes</li> <li>As with all active-passive designs, the passive node is not passing traffic in the majority of times</li> </ul> <p><strong>Uses</strong></p> <ul> <li>Architectures requiring IPSEC VPN with NAT-T support (like IOT or other non-FortiGate IPSEC termination)</li> </ul> </div> <p>??? note "High-Level View" <a class=glightbox href=../img/fwb-template-ap-fabric-connector.png data-type=image data-width=auto data-height=auto data-desc-position=bottom><img alt src=../img/fwb-template-ap-fabric-connector.png></a></p> <p>??? note "Detailed View" <strong>FortiGate1 is Active</strong> <a class=glightbox href=../img/fwb-template-ap-fabric-connector-details.png data-type=image data-width=auto data-height=auto data-desc-position=bottom><img alt src=../img/fwb-template-ap-fabric-connector-details.png></a></p> <h3 id=fortigate-vm-active-passive-with-load-balancers>FortiGate-VM – Active-Passive with Load Balancers</h3> <div class="admonition example"> <p><strong>Strengths</strong></p> <ul> <li>Relatively fast fail over (10 to 20 seconds on average)</li> <li>Source IP of connections that ingress from Internet is not modified</li> </ul> <p><strong>Weaknesses</strong></p> <ul> <li>Existing established connections are not failed over(Azure Load Balancer limitation)</li> <li>Only supports UDP or TCP connections (Azure Load Balancer limitation)</li> <li>As with all active-passive designs, the passive node is not passing traffic in the majority of times</li> </ul> <p><strong>Uses</strong></p> <ul> <li>Fortinet Azure SDWAN hub</li> </ul> </div> <p>??? note "High-Level View" <a class=glightbox href=../img/fwb-template-ap-fabric-load-balancer.png data-type=image data-width=auto data-height=auto data-desc-position=bottom><img alt src=../img/fwb-template-ap-fabric-load-balancer.png></a></p> <p>??? note "Detailed View" <a class=glightbox href=../img/fwb-template-ap-fabric-load-balancer-details.png data-type=image data-width=auto data-height=auto data-desc-position=bottom><img alt src=../img/fwb-template-ap-fabric-load-balancer-details.png></a></p> <h3 id=fortigate-vm-active-active-with-load-balancers>FortiGate-VM – Active-Active with Load Balancers</h3> <div class="admonition example"> <p><strong>Strengths</strong></p> <ul> <li>Relatively fast fail over (10 to 20 seconds on average)</li> <li>Both firewall VMs are processing traffic during normal operations</li> </ul> <p><strong>Weaknesses</strong></p> <ul> <li>Existing established connections are not failed over(Azure Load Balancer limitation)</li> <li>Only supports UDP or TCP connections (Azure Load Balancer limitation)</li> <li>Source IP of connections that ingress from Internet is often modified with Source NAT</li> </ul> <p><strong>Uses</strong></p> <ul> <li>Recommended Architecture</li> </ul> </div> <p>??? note "High-Level View" <a class=glightbox href=../img/fwb-template-aa-fabric-load-balancer.png data-type=image data-width=auto data-height=auto data-desc-position=bottom><img alt src=../img/fwb-template-aa-fabric-load-balancer.png></a></p> <p>??? note "Detailed View" <strong>Multiple Public IPs</strong> <a class=glightbox href=../img/fwb-template-aa-fabric-load-balancer-details.png data-type=image data-width=auto data-height=auto data-desc-position=bottom><img alt src=../img/fwb-template-aa-fabric-load-balancer-details.png></a></p> <h3 id=azure-gateway-load-balancer-and-fortigate>Azure Gateway Load Balancer and FortiGate</h3> <div class="admonition example"> <ul> <li>The integration of Fortinet FortiGate Next-Generation Firewall (NGFW) with Azure Gateway Load Balancer (GWLB) simplifies deployment and configuration while reducing outages.</li> <li>The Azure GWLB supports service chaining to enable transparent deployment of firewall NVAs without introducing management overhead.</li> <li>It uses the VXLAN protocol for encapsulation and decapsulation, maintaining flow symmetry for traffic inspection by firewall NVAs.</li> </ul> </div> <p>??? note "Reference Architecture" <strong>Consumer Load Balancer Frontend Public IP</strong> <a class=glightbox href=../img/fwb-azure-gateway-load-balancer.png data-type=image data-width=auto data-height=auto data-desc-position=bottom><img alt src=../img/fwb-azure-gateway-load-balancer.png></a></p> <h2 id=frequently-asked-questions>Frequently Asked Questions</h2> <div class="admonition note"> <p><strong>Q – Does this apply to other Public Clouds ?</strong></p> <p>A – This Architecture is specific to Azure.</p> <hr> <p><strong>Q – Why are the FortiWeb VMs and FortiGate VMs in parallel instead of series for Internet web flows?</strong></p> <p>A – FortiWeb has integrated IPS and AV thus no need to duplicate on FortiGate using up cloud computing cycles.</p> <hr> <p><strong>Q – Why is the FWB Internal LB in the FWBExternal Subnet and not the FWBInternal Subnet?</strong></p> <p>A – Because it is used only for traffic passing through SDWAN.</p> <hr> <p><strong>Q – Why is there no Azure Internal LB in the FWBInternal subnet</strong></p> <p>A – FortiWeb can only be deployed in reversed proxy in Azure and thus the traffic replies automatically go back to the appropriate FortiWeb VM thus negating the needs to have Azure Internal Load Balancer in HA Ports.</p> </div> </article> </div> <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script> </div> <button type=button class="md-top md-icon" data-md-component=top hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg> Back to top </button> </main> <footer class=md-footer> <nav class="md-footer__inner md-grid" aria-label=Footer> <a href=../hol-fwb-lab-2/ class="md-footer__link md-footer__link--prev" aria-label="Previous: Lab 2 - FortiWeb"> <div class="md-footer__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg> </div> <div class=md-footer__title> <span class=md-footer__direction> Previous </span> <div class=md-ellipsis> Lab 2 - FortiWeb </div> </div> </a> <a href=../bootstrap/ class="md-footer__link md-footer__link--next" aria-label="Next: FortiWeb Bootstrap"> <div class=md-footer__title> <span class=md-footer__direction> Next </span> <div class=md-ellipsis> FortiWeb Bootstrap </div> </div> <div class="md-footer__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg> </div> </a> </nav> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-copyright> <div class=md-copyright__highlight> Try to be nice. </div> </div> </div> </div> </footer> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <div class=md-progress data-md-component=progress role=progressbar></div> <script id=__config type=application/json>{"base": "..", "features": ["announce.dismiss", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "header.autohide", "navigation.footer", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tabs", "navigation.top", "navigation.tracking", "navigation.path", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script> <script src=../assets/javascripts/bundle.af256bd8.min.js></script> <script id=init-glightbox>const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fortinet-reference-architecture-for-azure" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="XPERTS Academy - Cloud (Lab Guide Demo)" class="md-header__button md-logo" aria-label="XPERTS Academy - Cloud (Lab Guide Demo)" data-md-component="logo">
+      
+  <img src="../img/fortinet.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            XPERTS Academy - Cloud (Lab Guide Demo)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Reference Architecture
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="white" data-md-color-accent="white"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://ajlab-gh.github.io/xperts-docs-demo/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AJLab-GH/docs-template
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="XPERTS Academy - Cloud (Lab Guide Demo)" class="md-nav__button md-logo" aria-label="XPERTS Academy - Cloud (Lab Guide Demo)" data-md-component="logo">
+      
+  <img src="../img/fortinet.svg" alt="logo">
+
+    </a>
+    XPERTS Academy - Cloud (Lab Guide Demo)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://ajlab-gh.github.io/xperts-docs-demo/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AJLab-GH/docs-template
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start-azure-account/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accessing Your Azure Account
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start-deploy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying Your Lab Environment in Azure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Hands on Labs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Hands on Labs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hol-nsg-fgt-lab-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lab 1 - Azure NSG & FortiGate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hol-fwb-lab-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lab 2 - FortiWeb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Resources
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Reference Architecture
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Reference Architecture
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#considerations-and-justifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerations and Justifications
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fortiweb-reference-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      FortiWeb Reference Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fortigate-reference-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      FortiGate Reference Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FortiGate Reference Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fortigate-vm-active-passive-with-fabric-connector" class="md-nav__link">
+    <span class="md-ellipsis">
+      FortiGate-VM – Active-Passive with Fabric connector
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fortigate-vm-active-passive-with-load-balancers" class="md-nav__link">
+    <span class="md-ellipsis">
+      FortiGate-VM – Active-Passive with Load Balancers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fortigate-vm-active-active-with-load-balancers" class="md-nav__link">
+    <span class="md-ellipsis">
+      FortiGate-VM – Active-Active with Load Balancers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#azure-gateway-load-balancer-and-fortigate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Azure Gateway Load Balancer and FortiGate
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frequently-asked-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frequently Asked Questions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bootstrap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FortiWeb Bootstrap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../role-play/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cloud Role Play
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../download-pdf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download HoL (pdf)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#considerations-and-justifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerations and Justifications
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fortiweb-reference-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      FortiWeb Reference Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fortigate-reference-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      FortiGate Reference Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FortiGate Reference Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fortigate-vm-active-passive-with-fabric-connector" class="md-nav__link">
+    <span class="md-ellipsis">
+      FortiGate-VM – Active-Passive with Fabric connector
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fortigate-vm-active-passive-with-load-balancers" class="md-nav__link">
+    <span class="md-ellipsis">
+      FortiGate-VM – Active-Passive with Load Balancers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fortigate-vm-active-active-with-load-balancers" class="md-nav__link">
+    <span class="md-ellipsis">
+      FortiGate-VM – Active-Active with Load Balancers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#azure-gateway-load-balancer-and-fortigate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Azure Gateway Load Balancer and FortiGate
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frequently-asked-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frequently Asked Questions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="fortinet-reference-architecture-for-azure">Fortinet Reference Architecture for Azure</h1>
+<h2 id="considerations-and-justifications">Considerations and Justifications</h2>
+<div class="admonition note">
+<ul>
+<li>
+<p><strong>FortiWeb</strong> is primarily designed for web traffic, specifically HTTP/HTTPS, and offers 60+ protections including <strong>machine learning</strong> and <strong>signature-based protections</strong>.</p>
+</li>
+<li>
+<p><strong>FortiGate</strong> is designed for managing all other types of traffic, supporting multiple protocols, and providing <strong>application control</strong> and <strong>intrusion prevention systems</strong>.</p>
+</li>
+</ul>
+</div>
+<details class="note">
+<summary>WAF Feature Comparison: FortiWeb vs. FortiGate</summary>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>FortiGate</th>
+<th>FortiWeb</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Web App Attack Signatures</td>
+<td><span style="color:green">Yes</span></td>
+<td><span style="color:green">Yes</span></td>
+</tr>
+<tr>
+<td>WAF Signatures (FortiGuard Subscription)</td>
+<td><span style="color:red">No</span></td>
+<td><span style="color:green">Yes</span></td>
+</tr>
+<tr>
+<td>IP Reputation (FortiGuard subscription)</td>
+<td><span style="color:green">Yes</span></td>
+<td><span style="color:green">Yes</span></td>
+</tr>
+<tr>
+<td>Layer 7 DoS Protection</td>
+<td><span style="color:green">Yes</span></td>
+<td><span style="color:green">Yes</span> (+ Bot validation)</td>
+</tr>
+<tr>
+<td>Machine Learning based Anomaly Detection</td>
+<td><span style="color:red">No</span></td>
+<td><span style="color:green">Yes</span></td>
+</tr>
+<tr>
+<td>Machine Learning based Bot Mitigation</td>
+<td><span style="color:red">No</span></td>
+<td><span style="color:green">Yes</span></td>
+</tr>
+<tr>
+<td>Machine Learning based API Protections</td>
+<td><span style="color:red">No</span></td>
+<td><span style="color:green">Yes</span></td>
+</tr>
+<tr>
+<td>HTTP RFC Validation</td>
+<td><span style="color:green">Yes</span></td>
+<td><span style="color:green">Yes</span></td>
+</tr>
+<tr>
+<td>API Protection</td>
+<td><span style="color:red">No</span></td>
+<td><span style="color:green">Yes</span></td>
+</tr>
+<tr>
+<td>Cookie Protection, CSRF</td>
+<td><span style="color:red">No</span></td>
+<td><span style="color:green">Yes</span></td>
+</tr>
+<tr>
+<td>Browser Security (Man-in-the-Browser)</td>
+<td><span style="color:red">No</span></td>
+<td><span style="color:green">Yes</span></td>
+</tr>
+<tr>
+<td>Syntax based detection</td>
+<td><span style="color:red">No</span></td>
+<td><span style="color:green">Yes</span></td>
+</tr>
+<tr>
+<td>Antivirus/Antimalware</td>
+<td><span style="color:green">Yes</span></td>
+<td><span style="color:green">Yes</span></td>
+</tr>
+<tr>
+<td>Web App Attack Correlation</td>
+<td><span style="color:red">No</span></td>
+<td><span style="color:green">Yes</span></td>
+</tr>
+<tr>
+<td>Web App Vulnerability Scanner</td>
+<td><span style="color:red">No</span></td>
+<td><span style="color:green">Yes</span></td>
+</tr>
+<tr>
+<td>Web Filtering</td>
+<td><span style="color:green">Yes</span></td>
+<td><span style="color:red">No</span></td>
+</tr>
+<tr>
+<td>Data Leak Prevention</td>
+<td><span style="color:green">Yes</span></td>
+<td><span style="color:green">Yes</span></td>
+</tr>
+<tr>
+<td>Attack Alert Tuning</td>
+<td><span style="color:red">No</span></td>
+<td><span style="color:green">Yes</span></td>
+</tr>
+<tr>
+<td>Web Defacement Protection</td>
+<td><span style="color:red">No</span></td>
+<td><span style="color:green">Yes</span></td>
+</tr>
+<tr>
+<td>Authentication Offload</td>
+<td><span style="color:green">Yes</span></td>
+<td><span style="color:green">Yes</span></td>
+</tr>
+<tr>
+<td>Site Publishing and SSO</td>
+<td>SSO</td>
+<td><span style="color:green">Yes</span></td>
+</tr>
+<tr>
+<td>PCI Compliance</td>
+<td><span style="color:green">Yes</span></td>
+<td><span style="color:green">Yes</span></td>
+</tr>
+<tr>
+<td>Dedicated WAF Throughput</td>
+<td><span style="color:red">No</span></td>
+<td><span style="color:green">Yes</span></td>
+</tr>
+<tr>
+<td>SSL Inspection</td>
+<td><span style="color:green">Yes</span></td>
+<td><span style="color:green">Yes</span></td>
+</tr>
+</tbody>
+</table>
+</details>
+<h2 id="fortiweb-reference-architecture">FortiWeb Reference Architecture</h2>
+<details class="note" open="open">
+<summary>High-Level View</summary>
+<p><span style="color:red;">Click on the image if you want to enlarge it.</span></p>
+<p><a class="glightbox" href="../img/fwb-reference-topology.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/fwb-reference-topology.png" /></a></p>
+</details>
+<details class="note">
+<summary>Detailed View</summary>
+<p><a class="glightbox" href="../img/fwb-reference-topology-detail.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/fwb-reference-topology-detail.png" /></a></p>
+</details>
+<details class="note">
+<summary>Detailed View with Routes</summary>
+<p><a class="glightbox" href="../img/fwb-reference-topology-detail-routes.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/fwb-reference-topology-detail-routes.png" /></a></p>
+</details>
+<details class="note">
+<summary>Internet originating Non-HTTP(S) flows (i.e. SSH etc…)</summary>
+<p><a class="glightbox" href="../img/fwb-internet-originating-non-http-flows.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/fwb-internet-originating-non-http-flows.png" /></a></p>
+</details>
+<details class="note">
+<summary>Internet originating HTTP(S) flows</summary>
+<p><a class="glightbox" href="../img/fwb-internet-originating-http-flows.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/fwb-internet-originating-http-flows.png" /></a></p>
+</details>
+<details class="note">
+<summary>Internal originating Non-HTTP(S) flows (i.e. SSH etc…)</summary>
+<p><a class="glightbox" href="../img/fwb-internal-originating-non-http-flows.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/fwb-internal-originating-non-http-flows.png" /></a></p>
+</details>
+<details class="note">
+<summary>Internal originating HTTP(S) flows</summary>
+<p><a class="glightbox" href="../img/fwb-internal-originating-http-flows.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/fwb-internal-originating-http-flows.png" /></a></p>
+</details>
+<h2 id="fortigate-reference-architecture">FortiGate Reference Architecture</h2>
+<h3 id="fortigate-vm-active-passive-with-fabric-connector">FortiGate-VM – Active-Passive with Fabric connector</h3>
+<div class="admonition example">
+<p><strong>Strengths</strong></p>
+<ul>
+<li>Failover of existing connections</li>
+<li>Support of non-TCP/UDP protocols (e.g. ESP, ICMP)</li>
+<li>Source IP of connections that ingress from the Internet is not modified</li>
+</ul>
+<p><strong>Weaknesses</strong></p>
+<ul>
+<li>Failover time is dependent on Azure API response time and can vary from approximately 45 seconds to up to more than 2 minutes</li>
+<li>As with all active-passive designs, the passive node is not passing traffic in the majority of times</li>
+</ul>
+<p><strong>Uses</strong></p>
+<ul>
+<li>Architectures requiring IPSEC VPN with NAT-T support (like IOT or other non-FortiGate IPSEC termination)</li>
+</ul>
+</div>
+<details class="note">
+<summary>High-Level View</summary>
+<p><a class="glightbox" href="../img/fwb-template-ap-fabric-connector.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/fwb-template-ap-fabric-connector.png" /></a></p>
+</details>
+<details class="note">
+<summary>Detailed View</summary>
+<p><strong>FortiGate1 is Active</strong>
+<a class="glightbox" href="../img/fwb-template-ap-fabric-connector-details.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/fwb-template-ap-fabric-connector-details.png" /></a></p>
+</details>
+<h3 id="fortigate-vm-active-passive-with-load-balancers">FortiGate-VM – Active-Passive with Load Balancers</h3>
+<div class="admonition example">
+<p><strong>Strengths</strong></p>
+<ul>
+<li>Relatively fast fail over (10 to 20 seconds on average)</li>
+<li>Source IP of connections that ingress from Internet is not modified</li>
+</ul>
+<p><strong>Weaknesses</strong></p>
+<ul>
+<li>Existing established connections are not failed over(Azure Load Balancer limitation)</li>
+<li>Only supports UDP or TCP connections (Azure Load Balancer limitation)</li>
+<li>As with all active-passive designs, the passive node is not passing traffic in the majority of times</li>
+</ul>
+<p><strong>Uses</strong></p>
+<ul>
+<li>Fortinet Azure SDWAN hub</li>
+</ul>
+</div>
+<details class="note">
+<summary>High-Level View</summary>
+<p><a class="glightbox" href="../img/fwb-template-ap-fabric-load-balancer.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/fwb-template-ap-fabric-load-balancer.png" /></a></p>
+</details>
+<details class="note">
+<summary>Detailed View</summary>
+<p><a class="glightbox" href="../img/fwb-template-ap-fabric-load-balancer-details.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/fwb-template-ap-fabric-load-balancer-details.png" /></a></p>
+</details>
+<h3 id="fortigate-vm-active-active-with-load-balancers">FortiGate-VM – Active-Active with Load Balancers</h3>
+<div class="admonition example">
+<p><strong>Strengths</strong></p>
+<ul>
+<li>Relatively fast fail over (10 to 20 seconds on average)</li>
+<li>Both firewall VMs are processing traffic during normal operations</li>
+</ul>
+<p><strong>Weaknesses</strong></p>
+<ul>
+<li>Existing established connections are not failed over(Azure Load Balancer limitation)</li>
+<li>Only supports UDP or TCP connections (Azure Load Balancer limitation)</li>
+<li>Source IP of connections that ingress from Internet is often modified with Source NAT</li>
+</ul>
+<p><strong>Uses</strong></p>
+<ul>
+<li>Recommended Architecture</li>
+</ul>
+</div>
+<details class="note">
+<summary>High-Level View</summary>
+<p><a class="glightbox" href="../img/fwb-template-aa-fabric-load-balancer.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/fwb-template-aa-fabric-load-balancer.png" /></a></p>
+</details>
+<details class="note">
+<summary>Detailed View</summary>
+<p><strong>Multiple Public IPs</strong>
+<a class="glightbox" href="../img/fwb-template-aa-fabric-load-balancer-details.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/fwb-template-aa-fabric-load-balancer-details.png" /></a></p>
+</details>
+<h3 id="azure-gateway-load-balancer-and-fortigate">Azure Gateway Load Balancer and FortiGate</h3>
+<div class="admonition example">
+<ul>
+<li>The integration of Fortinet FortiGate Next-Generation Firewall (NGFW) with Azure Gateway Load Balancer (GWLB) simplifies deployment and configuration while reducing outages.</li>
+<li>The Azure GWLB supports service chaining to enable transparent deployment of firewall NVAs without introducing management overhead.</li>
+<li>It uses the VXLAN protocol for encapsulation and decapsulation, maintaining flow symmetry for traffic inspection by firewall NVAs.</li>
+</ul>
+</div>
+<details class="note">
+<summary>Reference Architecture</summary>
+<p><strong>Consumer Load  Balancer Frontend Public IP</strong>
+<a class="glightbox" href="../img/fwb-azure-gateway-load-balancer.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/fwb-azure-gateway-load-balancer.png" /></a></p>
+</details>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<div class="admonition note">
+<p><strong>Q – Does this apply to other Public Clouds ?</strong></p>
+<p>A – This Architecture is specific to Azure.</p>
+<hr />
+<p><strong>Q – Why are the FortiWeb VMs and FortiGate VMs in parallel instead of series for Internet web flows?</strong></p>
+<p>A – FortiWeb has integrated IPS and AV thus no need to duplicate on FortiGate using up cloud computing cycles.</p>
+<hr />
+<p><strong>Q – Why is the FWB Internal LB in the FWBExternal Subnet and not the FWBInternal Subnet?</strong></p>
+<p>A – Because it is used only for traffic passing through SDWAN.</p>
+<hr />
+<p><strong>Q – Why is there no Azure Internal LB in the FWBInternal subnet</strong></p>
+<p>A – FortiWeb can only be deployed in reversed proxy in Azure and thus the traffic replies automatically go back to the appropriate FortiWeb VM thus negating the needs to have Azure Internal Load Balancer in HA Ports.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../hol-fwb-lab-2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Lab 2 - FortiWeb">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Lab 2 - FortiWeb
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../bootstrap/" class="md-footer__link md-footer__link--next" aria-label="Next: FortiWeb Bootstrap">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                FortiWeb Bootstrap
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Try and be nice
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.af256bd8.min.js"></script>
+      
+        <script src="../javascripts/extra.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(() => { lightbox.reload() });
-</script></body> </html>
+</script></body>
+</html>

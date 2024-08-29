@@ -1,4 +1,65 @@
-<!doctype html><html lang=en class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="docs template for getting started"><meta name=author content="Alex Jammes"><link href=https://ajlab-gh.github.io/xperts-docs-demo/hol-nsg-fgt-lab-1/ rel=canonical><link href=../start-deploy/ rel=prev><link href=../hol-fwb-lab-2/ rel=next><link rel=icon href=../assets/images/favicon.png><meta name=generator content="mkdocs-1.6.0, mkdocs-material-9.5.33"><title>Lab 1 - Azure NSG & FortiGate - docs template</title><link rel=stylesheet href=../assets/stylesheets/main.3cba04c6.min.css><link rel=stylesheet href=../assets/stylesheets/palette.06af60db.min.css><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback"><style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style><script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script><meta property=og:type content=website><meta property=og:title content="Lab 1 - Azure NSG & FortiGate - docs template"><meta property=og:description content="docs template for getting started"><meta property=og:image content=https://ajlab-gh.github.io/xperts-docs-demo/assets/images/social/hol-nsg-fgt-lab-1.png><meta property=og:image:type content=image/png><meta property=og:image:width content=1200><meta property=og:image:height content=630><meta content=https://ajlab-gh.github.io/xperts-docs-demo/hol-nsg-fgt-lab-1/ property=og:url><meta name=twitter:card content=summary_large_image><meta name=twitter:title content="Lab 1 - Azure NSG & FortiGate - docs template"><meta name=twitter:description content="docs template for getting started"><meta name=twitter:image content=https://ajlab-gh.github.io/xperts-docs-demo/assets/images/social/hol-nsg-fgt-lab-1.png><link href=../assets/stylesheets/glightbox.min.css rel=stylesheet><style>
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Using XPERTS 2023 Lab Guide to Demo User Contributions and Edits">
+      
+      
+        <meta name="author" content="Alex Jammes">
+      
+      
+        <link rel="canonical" href="https://ajlab-gh.github.io/xperts-docs-demo/hol-nsg-fgt-lab-1/">
+      
+      
+        <link rel="prev" href="../start-deploy/">
+      
+      
+        <link rel="next" href="../hol-fwb-lab-2/">
+      
+      
+      <link rel="icon" href="../img/fortinet.svg">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
+    
+    
+      
+        <title>Lab 1 - Azure NSG & FortiGate - XPERTS Academy - Cloud (Lab Guide Demo)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -7,170 +68,1041 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style><script src=../assets/javascripts/glightbox.min.js></script></head> <body dir=ltr data-md-color-scheme=default data-md-color-primary=black data-md-color-accent=grey> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#protecting-web-application-using-azure-network-security-groups-and-fortigate class=md-skip> Skip to content </a> </div> <div data-md-component=announce> </div> <header class=md-header data-md-component=header> <nav class="md-header__inner md-grid" aria-label=Header> <a href=.. title="docs template" class="md-header__button md-logo" aria-label="docs template" data-md-component=logo> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg> </a> <label class="md-header__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg> </label> <div class=md-header__title data-md-component=header-title> <div class=md-header__ellipsis> <div class=md-header__topic> <span class=md-ellipsis> docs template </span> </div> <div class=md-header__topic data-md-component=header-topic> <span class=md-ellipsis> Lab 1 - Azure NSG & FortiGate </span> </div> </div> </div> <form class=md-header__option data-md-component=palette> <input class=md-option data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme=default data-md-color-primary=black data-md-color-accent=grey aria-label="Switch to dark mode" type=radio name=__palette id=__palette_0> <label class="md-header__button md-icon" title="Switch to dark mode" for=__palette_1 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> </label> <input class=md-option data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme=slate data-md-color-primary=grey data-md-color-accent=black aria-label type=radio name=__palette id=__palette_1> <label class="md-header__button md-icon" title for=__palette_0 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg> </label> </form> <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script> <label class="md-header__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=Search placeholder=Search autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg> </label> <nav class=md-search__options aria-label=Search> <a href=javascript:void(0) class="md-search__icon md-icon" title=Share aria-label=Share data-clipboard data-clipboard-text data-md-component=search-share tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg> </a> <button type=reset class="md-search__icon md-icon" title=Clear aria-label=Clear tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg> </button> </nav> <div class=md-search__suggest data-md-component=search-suggest></div> </form> <div class=md-search__output> <div class=md-search__scrollwrap tabindex=0 data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> Initializing search </div> <ol class=md-search-result__list role=presentation></ol> </div> </div> </div> </div> </div> <div class=md-header__source> <a href=https://ajlab-gh.github.io/xperts-docs-demo/ title="Go to repository" class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 496 512"><!-- Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> </div> <div class=md-source__repository> AJLab-GH/docs-template </div> </a> </div> </nav> </header> <div class=md-container data-md-component=container> <nav class=md-tabs aria-label=Tabs data-md-component=tabs> <div class=md-grid> <ul class=md-tabs__list> <li class=md-tabs__item> <a href=.. class=md-tabs__link> Introduction </a> </li> <li class=md-tabs__item> <a href=../start-azure-account/ class=md-tabs__link> Getting Started </a> </li> <li class="md-tabs__item md-tabs__item--active"> <a href=./ class=md-tabs__link> Hands on Labs </a> </li> <li class=md-tabs__item> <a href=../architecture/ class=md-tabs__link> Resources </a> </li> </ul> </div> </nav> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=sidebar data-md-type=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary md-nav--lifted" aria-label=Navigation data-md-level=0> <label class=md-nav__title for=__drawer> <a href=.. title="docs template" class="md-nav__button md-logo" aria-label="docs template" data-md-component=logo> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg> </a> docs template </label> <div class=md-nav__source> <a href=https://ajlab-gh.github.io/xperts-docs-demo/ title="Go to repository" class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 496 512"><!-- Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> </div> <div class=md-source__repository> AJLab-GH/docs-template </div> </a> </div> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=.. class=md-nav__link> <span class=md-ellipsis> Introduction </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2> <label class=md-nav__link for=__nav_2 id=__nav_2_label tabindex=0> <span class=md-ellipsis> Getting Started </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_2_label aria-expanded=false> <label class=md-nav__title for=__nav_2> <span class="md-nav__icon md-icon"></span> Getting Started </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../start-azure-account/ class=md-nav__link> <span class=md-ellipsis> Accessing Your Azure Account </span> </a> </li> <li class=md-nav__item> <a href=../start-deploy/ class=md-nav__link> <span class=md-ellipsis> Deploying Your Lab Environment in Azure </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_3 checked> <label class=md-nav__link for=__nav_3 id=__nav_3_label tabindex> <span class=md-ellipsis> Hands on Labs </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_3_label aria-expanded=true> <label class=md-nav__title for=__nav_3> <span class="md-nav__icon md-icon"></span> Hands on Labs </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" type=checkbox id=__toc> <a href=./ class="md-nav__link md-nav__link--active"> <span class=md-ellipsis> Lab 1 - Azure NSG & FortiGate </span> </a> </li> <li class=md-nav__item> <a href=../hol-fwb-lab-2/ class=md-nav__link> <span class=md-ellipsis> Lab 2 - FortiWeb </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_4> <label class=md-nav__link for=__nav_4 id=__nav_4_label tabindex=0> <span class=md-ellipsis> Resources </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_4_label aria-expanded=false> <label class=md-nav__title for=__nav_4> <span class="md-nav__icon md-icon"></span> Resources </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../architecture/ class=md-nav__link> <span class=md-ellipsis> Reference Architecture </span> </a> </li> <li class=md-nav__item> <a href=../bootstrap/ class=md-nav__link> <span class=md-ellipsis> FortiWeb Bootstrap </span> </a> </li> <li class=md-nav__item> <a href=../role-play/ class=md-nav__link> <span class=md-ellipsis> Cloud Role Play </span> </a> </li> <li class=md-nav__item> <a href=../download-pdf/ class=md-nav__link> <span class=md-ellipsis> Download HoL (pdf) </span> </a> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class="md-sidebar md-sidebar--secondary" data-md-component=sidebar data-md-type=toc> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> </nav> </div> </div> </div> <div class=md-content data-md-component=content> <article class="md-content__inner md-typeset"> <a href=https://ajlab-gh.github.io/xperts-docs-demo/raw/main/docs/hol-nsg-fgt-lab-1.md title="View source of this page" class="md-content__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg> </a> <h1 id=protecting-web-application-using-azure-network-security-groups-and-fortigate>Protecting Web Application Using Azure Network Security Groups and FortiGate</h1> <h2 id=accessing-dvwa-via-nsgs>Accessing DVWA via NSG's</h2> <p>The first step in this exercise will be to create a Network Security Group and associate it to the subnet where the DVWA instance is deployed.</p> <div class="admonition tip"> <p class=admonition-title>Tip</p> <p>Click on the images to view them in a larger format.</p> </div> <p>??? note "Creating a Network Security Group" In the search bar type <strong>Network Security Groups</strong>, and select the non-classic option.</p> <pre><code>![](img/networkSecurityGroup.png)
-
-Create a new Security Group.
-
-![](img/AddnetworkSecurityGroup.png)
-
-Select the Resource Group **@RESOURCE_GROUP_NAME** and give the Network Security Group a **unique name**.
-
-**Review +Create** the Resource.
-
-![](img/networkSecurityGroup-filled.png)
-
-Once created, Click on **Go to Resource** to be redirected to your newly created NSG.
-
-![](img/networkSecurityGroup-created.png)
-
-Navigate to the **Inbound Security Rules** menu Item.
-
-![](img/networkSecurityGroup-InboundSecurityRules.png)
-
-Create new entries to allow **HTTP, HTTPS, SSH** services from any sources.
-
-| AllowAnyHTTPInbound                                                                                                    | AllowAnyHTTPSInbound                                                                                                    | AllowAnySSHInbound                                                                                                    |
-|------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
-| **Source** = Any &lt;br&gt; **Source Port** = Any &lt;br&gt; **Destination** = Any &lt;br&gt; **Service** = HTTP &lt;br&gt; **Action** = Allow | **Source** = Any &lt;br&gt; **Source Port** = Any &lt;br&gt; **Destination** = Any &lt;br&gt; **Service** = HTTPS &lt;br&gt; **Action** = Allow | **Source** = Any &lt;br&gt; **Source Port** = Any &lt;br&gt; **Destination** = Any &lt;br&gt; **Service** = SSH &lt;br&gt; **Action** = Allow |
-
-![](img/networkSecurityGroup-Configure.PNG)
-
-Once you've created the corresponding rules, you'll see your rules, in addition to the rules Azure had implicitely configured:
-
-![](img/networkSecurityGroup-InboundSecurityRulesComplete.png)
-
-Navigate to the **Subnets** menu and **Associate** the Network security group to the **DMZProtectedA**  Subnet.
-
-![](img/networkSecurityGroup-Association.png)
-
-![](img/networkSecurityGroup-Associated.png)
-</code></pre> <p>??? note "Testing your Network Security Group" In Azure CLI, print your deployment <strong>Outputs</strong> and click on <a href=http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com target=_blank>http://<a class="magiclink magiclink-github magiclink-mention" href=https://github.com/PREFIX-fgt-to-dvwa title="GitHub User: PREFIX-fgt-to-dvwa">@PREFIX-fgt-to-dvwa</a>.<a class="magiclink magiclink-github magiclink-mention" href=https://github.com/REGION title="GitHub User: REGION">@REGION</a>.cloudapp.azure.com</a></p> <pre><code>``` py
-az deployment group show -g @RESOURCE_GROUP_NAME -n fortinetCloudBlueprint --query properties.outputs
-```
-
-![](img/BicepOutputviaFGT.png)
-
-Log in to DVWA using the credentials **admin** and **password**.
-
-![](img/dvwalogin.PNG)
-
-Navigate to the **SQL Injection** menu item and type:
-
-```
-' OR 1=1#
-```
-
-![](img/dvwaSQLi.png)
-
-Notice the attack was not prevented.
-
-![](img/dvwaSQLi-Result.png)
-
-**Why?** After the NSG permitted access to the DVWA Workload on Port 80 (HTTP) no subsequent inspection occured.
-</code></pre> <h2 id=accessing-dvwa-via-fortigate>Accessing DVWA via FortiGate</h2> <p>Now, we will execute the same attack, but this time, we will secure the DVWA Workload behind the FortiGate Firewall.</p> <p>??? note "Testing SQL Injection Attack" Log in to the Primary FortiGate using the credentials you established during deployment.</p> <pre><code>```py
-az deployment group show -g  @RESOURCE_GROUP_NAME -n fortinetCloudBlueprint --query properties.outputs
-```
-
-![](img/BicepOutputAccessFGT.png)
-
-Once logged in to the FortiGate, edit the firewall policy named **DVWA-HTTP-Inbound_Access**. Enable all the security profiles with their default settings.
-
-![](img/firewallPolicyToggle.png)
-
-Click OK to apply the changes.
-
-Browse again to &lt;a href="http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/vulnerabilities/sqli/" target="_blank"&gt;http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/vulnerabilities/sqli/&lt;/a&gt; and enter this **SQL injection** attack into the form.
-
-```py
-' OR 1=1#
-```
-
-![](img/dvwaSQLi.png)
-
-Notice that the page is hung.
-
-Let's dive deeper and look at the FortiGate's Log. Open the **Security Events**, select the **Logs** tab and use the **Intrusion Prevention** filter.
-
-![](img/securityEventsIPSLog.PNG)
-
-**Why was this attack dropped?** The attack triggered a signature set to block within the FortiGate's IPS Security Profile.
-</code></pre> <p>??? note "Testing Command Injection Attack" Now lets try a <strong>Command Injection</strong> attack.</p> <pre><code>Browse to &lt;a href="http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/vulnerabilities/exec/" target="_blank"&gt;http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/vulnerabilities/exec/&lt;/a&gt; and enter this **Command injection** attack into the form.
-
-```py
-;ps aux
-```
-
-![](img/dvwaCommandInjection.png)
-
-**Why was the attack let through?** The attack did not match a known IPS signature. Let's enhance the capabilities of the FortiGate by activating the **Web Application Firewall** security profile.
-</code></pre> <p>??? note "Enable WAF on FortiGate" Enable the <strong>Web Application Firewall</strong> Security Profile from <code>System -&gt; Feature Visibility</code></p> <pre><code>![](img/fortigateWAF.png)
-
-Once enabled, go back to the **Firewall Policy** and edit the **DVWA-HTTP-Inbound_Access** Firewall Policy.
-
-Toggle the **Inspection Mode** to **Proxy-Based** and enable the default **Web Application Firewall** Security Profile.
-
-![](img/fortigateWAFRule.png)
-
-Browse to &lt;a href="http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/vulnerabilities/exec/" target="_blank"&gt;http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/vulnerabilities/exec/&lt;/a&gt; and enter the **Command injection** attack again.
-
-```py
-;ps aux
-```
-
-The **Command Injection** should now be prevented.
-
-![](img/WAFDrop.png)
-
-The attack is blocked because WAF signatures have been activated.
-</code></pre> <p>??? note "Conclusion" Did you notice that all of the attacks stopped by the FortiGate were all stopped based on existing signatures?</p> <h2 id=demonstrating-non-signature-based-attacks-via-fortigate>Demonstrating non-signature based attacks via FortiGate</h2> <p>In this section, we will demonstrate various web application attacks to showcase and highlight the significance of the protections the Fortiweb will bring when compared to it's Next Generation Firewall counterpart.</p> <h3 id=csrf-attack-via-fortigate>CSRF Attack via FortiGate</h3> <p>??? question "What is Cross site request forgery (CSRF) attack?" Cross-Site Request Forgery (CSRF) is a type of security vulnerability that dupes a web browser into executing an undesired action within an authenticated application.</p> <pre><code>The attack usually involves deceptive social engineering tactics, such as sending a misleading email or link to the victim. Because the user is already authenticated within the application when the attack occurs, it becomes challenging to differentiate between legitimate and fraudulent requests.
-
-![](img/CSRF-Attack.png)
-</code></pre> <p>??? note "Authenticating to the Web Application" To successfully run the CSRF Attack, you must first authenticate yourself within the application.</p> <pre><code>Browse to &lt;a href="http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com" target="_blank"&gt;http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com&lt;/a&gt; and log in using the username **admin** and password **password**.
-
-??? tip "Troubleshooting - If you encounter any authentication issues"
-
-    - Browse to &lt;a href="http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/setup.php" target="_blank"&gt;http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/setup.php&lt;/a&gt;
-
-    - Click on **Create / Reset Database**
-
-    ![](img/Aspose.Words.fc7ec648-3633-4466-b24a-e7a2902fc6a3.006.png)
-</code></pre> <p>??? note "Executing CSRF Attack" Once authenticated to DVWA, click on the <a href="http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/vulnerabilities/csrf/?password_new=pwned&password_conf=pwned&Change=Change#" target=_blank><strong>LINK</strong></a> bellow to generate the attack.</p> <pre><code>| ![](img/outlook-logo.png) |
-|---------------------------|
-| **Dear user**, &lt;br&gt; All Hotmail customers have been upgraded to Outlook.com. Your Hotmail Account services has expired. &lt;br&gt; Due to our new system upgrade to Outlook. In order for it to remain active &lt;br&gt; follow the &lt;a href="http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/vulnerabilities/csrf/?password_new=pwned&amp;password_conf=pwned&amp;Change=Change#" target="_blank"&gt;&lt;strong&gt;LINK&lt;/strong&gt;&lt;/a&gt; Sign in Re-activate your account to Outlook. &lt;br&gt; Thanks, &lt;br&gt; The Microsoft account team |
-
-The link employs **Cross-Site Request Forgery** to exploit your authenticated session in order to initiate a password change.
-
-![](img/DVWA-CSRF-Password-Change.png)
-
-Your password has been changed without your knowledge.
-
-Logout of DVWA and Log back in using `admin:pwned`
-</code></pre> <p>??? note "Reseting the database for the next Lab" - Browse to <a href=http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/setup.php target=_blank>http://<a class="magiclink magiclink-github magiclink-mention" href=https://github.com/PREFIX-fgt-to-dvwa title="GitHub User: PREFIX-fgt-to-dvwa">@PREFIX-fgt-to-dvwa</a>.<a class="magiclink magiclink-github magiclink-mention" href=https://github.com/REGION title="GitHub User: REGION">@REGION</a>.cloudapp.azure.com/setup.php</a> - Click on <strong>Create / Reset Database</strong> - You can now login with the original password</p> <pre><code>![](img/Aspose.Words.fc7ec648-3633-4466-b24a-e7a2902fc6a3.006.png)
-</code></pre> <p>??? note "Conclusion" We have observed that FortiGate provides an additional layer of protection compared to NSGs, thanks to its WAF signatures. However, we can see that more advanced attacks like CSRF are not addressed by FortiGate.</p> <h3 id=cookie-poisoning-via-fortigate>Cookie Poisoning via FortiGate</h3> <p>??? question "What is Cookie Poisoning?"</p> <pre><code>In this lab, we will delve into the world of cookies - data stored in a user's browser that is specific to a website and session. These cookies serve a variety of purposes, from tracking user behavior to personalizing the online experience. However, they are also susceptible to cookie poisoning, a form of unauthorized manipulation by attackers aiming to gain access to sensitive information or services. This is particularly concerning because cookies often contain authentication data and other sensitive details, making them a prime target for hackers.
-</code></pre> <p>??? note "Changing Security Level Through Legitimate Web App Interactions" Browse to <a href=http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/security.php target=_blank><a class="magiclink magiclink-github magiclink-mention" href=https://github.com/PREFIX-fgt-to-dvwa title="GitHub User: PREFIX-fgt-to-dvwa">@PREFIX-fgt-to-dvwa</a>.<a class="magiclink magiclink-github magiclink-mention" href=https://github.com/REGION title="GitHub User: REGION">@REGION</a>.cloudapp.azure.com/security.php</a></p> <pre><code>Right click the page and select **Inspect**, go to **Storage** (Firefox) or **Application** (Chrome, Edge) and select **Cookies**.
-
-![](img/Aspose.Words.fc7ec648-3633-4466-b24a-e7a2902fc6a3.052.png)
-
-The security level granted to the user is stored in the cookie.
-
-From the **Web page**, select **Medium** and click **submit**. This is a legitimate action, and your security level has changed.
-
-![](img/Aspose.Words.fc7ec648-3633-4466-b24a-e7a2902fc6a3.053.png)
-</code></pre> <p>??? note "Overriding Security Level with Malicious Cookie Manipulation" Instead, now change the <strong>security cookie</strong> value manually to <strong>low</strong> and <strong>reload</strong> the page.</p> <pre><code>![](img/Aspose.Words.fc7ec648-3633-4466-b24a-e7a2902fc6a3.052.png)
-
-Notice we were able change the DVWA's security setting by tampering with the value of the **security cookie**.
-</code></pre> <h3 id=hidden-fields-manipulation-via-fortigate>Hidden Fields Manipulation via FortiGate</h3> <p>??? question "What is Hidden Fields" Hidden form inputs are often written into an HTML page by the web server when it serves that page to the client and are not visible on the rendered web page. Because HTTP is essentially stateless, like cookies, hidden form inputs are one way that web applications can use to remember session data from one page request to the next (called “persistence”).</p> <pre><code>Since they are not rendered visible, hidden inputs are sometimes erroneously perceived as safe. But like session cookies, hidden form inputs store the software’s state information client-side, instead of server-side. This makes it vulnerable.
-</code></pre> <p>??? note "Enforcing File Size Limitations – Successfully Blocking a Large File Upload" Download those 2 images to your computer:</p> <pre><code>- [Small Image](download/small.png) (14Ko)
-- [Large Image](download/large.png) (433Ko)
-
-Go to &lt;a href="http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/vulnerabilities/upload" target="_blank"&gt;@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/vulnerabilities/upload&lt;/a&gt; and upload the two images one at a time.
-
-![](img/Aspose.Words.fc7ec648-3633-4466-b24a-e7a2902fc6a3.079.png)
-
-The website enforces a policy that prohibits the uploading of images larger than 100 KB. Let's see how we can bypass the policy restrictions.
-</code></pre> <p>??? note "Bypassing Policy Restrictions to Upload a Large File" Right click the page, select <strong>Inspect</strong>, go to <strong>Inspector</strong> tab (Firefox) or <strong>Element</strong> tab (Chrome, Edge) and find the <strong>MAX_FILE_SIZE</strong> hidden form.</p> <pre><code>![](img/Aspose.Words.fc7ec648-3633-4466-b24a-e7a2902fc6a3.080.png)
-
-Change the value to **500,000** and try to upload the large image again. Notice you were now able to successfully upload the larger file.
-</code></pre> <p>??? note "Conclusion" In summary, though the FortiGate is not inherently bound to the use of signatures, many functionalities revolving around Web Applications, IPS and AV are. This means, for attacks that do not have a corresponding signature, the FortiGate will be vulnerable to many unknown attacks.</p> <p>In the next lab, we will evaluate FortiWeb and explore how to comprehensively protect a web application.</p> <div class="admonition info"> <p class=admonition-title>Info</p> <p>To view the WAF Feature Comparison between FortiWeb and FortiGate, navigate to the <a href=../architecture/ >Reference Architecture</a> section.</p> </div> </article> </div> <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script> </div> <button type=button class="md-top md-icon" data-md-component=top hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg> Back to top </button> </main> <footer class=md-footer> <nav class="md-footer__inner md-grid" aria-label=Footer> <a href=../start-deploy/ class="md-footer__link md-footer__link--prev" aria-label="Previous: Deploying Your Lab Environment in Azure"> <div class="md-footer__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg> </div> <div class=md-footer__title> <span class=md-footer__direction> Previous </span> <div class=md-ellipsis> Deploying Your Lab Environment in Azure </div> </div> </a> <a href=../hol-fwb-lab-2/ class="md-footer__link md-footer__link--next" aria-label="Next: Lab 2 - FortiWeb"> <div class=md-footer__title> <span class=md-footer__direction> Next </span> <div class=md-ellipsis> Lab 2 - FortiWeb </div> </div> <div class="md-footer__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg> </div> </a> </nav> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-copyright> <div class=md-copyright__highlight> Try to be nice. </div> </div> </div> </div> </footer> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <div class=md-progress data-md-component=progress role=progressbar></div> <script id=__config type=application/json>{"base": "..", "features": ["announce.dismiss", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "header.autohide", "navigation.footer", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tabs", "navigation.top", "navigation.tracking", "navigation.path", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script> <script src=../assets/javascripts/bundle.af256bd8.min.js></script> <script id=init-glightbox>const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#protecting-web-application-using-azure-network-security-groups-and-fortigate" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="XPERTS Academy - Cloud (Lab Guide Demo)" class="md-header__button md-logo" aria-label="XPERTS Academy - Cloud (Lab Guide Demo)" data-md-component="logo">
+      
+  <img src="../img/fortinet.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            XPERTS Academy - Cloud (Lab Guide Demo)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lab 1 - Azure NSG & FortiGate
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="white" data-md-color-accent="white"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://ajlab-gh.github.io/xperts-docs-demo/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AJLab-GH/docs-template
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="XPERTS Academy - Cloud (Lab Guide Demo)" class="md-nav__button md-logo" aria-label="XPERTS Academy - Cloud (Lab Guide Demo)" data-md-component="logo">
+      
+  <img src="../img/fortinet.svg" alt="logo">
+
+    </a>
+    XPERTS Academy - Cloud (Lab Guide Demo)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://ajlab-gh.github.io/xperts-docs-demo/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AJLab-GH/docs-template
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start-azure-account/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accessing Your Azure Account
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start-deploy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying Your Lab Environment in Azure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Hands on Labs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Hands on Labs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Lab 1 - Azure NSG & FortiGate
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Lab 1 - Azure NSG & FortiGate
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-dvwa-via-nsgs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing DVWA via NSG's
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-dvwa-via-fortigate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing DVWA via FortiGate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demonstrating-non-signature-based-attacks-via-fortigate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Demonstrating non-signature based attacks via FortiGate
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Demonstrating non-signature based attacks via FortiGate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csrf-attack-via-fortigate" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSRF Attack via FortiGate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cookie-poisoning-via-fortigate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cookie Poisoning via FortiGate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hidden-fields-manipulation-via-fortigate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hidden Fields Manipulation via FortiGate
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hol-fwb-lab-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lab 2 - FortiWeb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Resources
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reference Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bootstrap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FortiWeb Bootstrap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../role-play/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cloud Role Play
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../download-pdf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download HoL (pdf)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-dvwa-via-nsgs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing DVWA via NSG's
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-dvwa-via-fortigate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing DVWA via FortiGate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demonstrating-non-signature-based-attacks-via-fortigate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Demonstrating non-signature based attacks via FortiGate
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Demonstrating non-signature based attacks via FortiGate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csrf-attack-via-fortigate" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSRF Attack via FortiGate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cookie-poisoning-via-fortigate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cookie Poisoning via FortiGate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hidden-fields-manipulation-via-fortigate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hidden Fields Manipulation via FortiGate
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="protecting-web-application-using-azure-network-security-groups-and-fortigate">Protecting Web Application Using Azure Network Security Groups and FortiGate</h1>
+<h2 id="accessing-dvwa-via-nsgs">Accessing DVWA via NSG's</h2>
+<p>The first step in this exercise will be to create a Network Security Group and associate it to the subnet where the DVWA instance is deployed.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Click on the images to view them in a larger format.</p>
+</div>
+<details class="note">
+<summary>Creating a Network Security Group</summary>
+<p>In the search bar type <strong>Network Security Groups</strong>, and select the non-classic option.</p>
+<p><a class="glightbox" href="../img/networkSecurityGroup.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/networkSecurityGroup.png" /></a></p>
+<p>Create a new Security Group.</p>
+<p><a class="glightbox" href="../img/AddnetworkSecurityGroup.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/AddnetworkSecurityGroup.png" /></a></p>
+<p>Select the Resource Group <strong>@RESOURCE_GROUP_NAME</strong> and give the Network Security Group a <strong>unique name</strong>.</p>
+<p><strong>Review +Create</strong> the Resource.</p>
+<p><a class="glightbox" href="../img/networkSecurityGroup-filled.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/networkSecurityGroup-filled.png" /></a></p>
+<p>Once created, Click on <strong>Go to Resource</strong> to be redirected to your newly created NSG.</p>
+<p><a class="glightbox" href="../img/networkSecurityGroup-created.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/networkSecurityGroup-created.png" /></a></p>
+<p>Navigate to the <strong>Inbound Security Rules</strong> menu Item.</p>
+<p><a class="glightbox" href="../img/networkSecurityGroup-InboundSecurityRules.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/networkSecurityGroup-InboundSecurityRules.png" /></a></p>
+<p>Create new entries to allow <strong>HTTP, HTTPS, SSH</strong> services from any sources.</p>
+<table>
+<thead>
+<tr>
+<th>AllowAnyHTTPInbound</th>
+<th>AllowAnyHTTPSInbound</th>
+<th>AllowAnySSHInbound</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Source</strong> = Any <br> <strong>Source Port</strong> = Any <br> <strong>Destination</strong> = Any <br> <strong>Service</strong> = HTTP <br> <strong>Action</strong> = Allow</td>
+<td><strong>Source</strong> = Any <br> <strong>Source Port</strong> = Any <br> <strong>Destination</strong> = Any <br> <strong>Service</strong> = HTTPS <br> <strong>Action</strong> = Allow</td>
+<td><strong>Source</strong> = Any <br> <strong>Source Port</strong> = Any <br> <strong>Destination</strong> = Any <br> <strong>Service</strong> = SSH <br> <strong>Action</strong> = Allow</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" href="../img/networkSecurityGroup-Configure.PNG" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/networkSecurityGroup-Configure.PNG" /></a></p>
+<p>Once you've created the corresponding rules, you'll see your rules, in addition to the rules Azure had implicitely configured:</p>
+<p><a class="glightbox" href="../img/networkSecurityGroup-InboundSecurityRulesComplete.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/networkSecurityGroup-InboundSecurityRulesComplete.png" /></a></p>
+<p>Navigate to the <strong>Subnets</strong> menu and <strong>Associate</strong> the Network security group to the <strong>DMZProtectedA</strong>  Subnet.</p>
+<p><a class="glightbox" href="../img/networkSecurityGroup-Association.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/networkSecurityGroup-Association.png" /></a></p>
+<p><a class="glightbox" href="../img/networkSecurityGroup-Associated.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/networkSecurityGroup-Associated.png" /></a></p>
+</details>
+<details class="note">
+<summary>Testing your Network Security Group</summary>
+<p>In Azure CLI, print your deployment <strong>Outputs</strong> and click on <a href="http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com" target="_blank">http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com</a></p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">az</span> <span class="n">deployment</span> <span class="n">group</span> <span class="n">show</span> <span class="o">-</span><span class="n">g</span> <span class="nd">@RESOURCE_GROUP_NAME</span> <span class="o">-</span><span class="n">n</span> <span class="n">fortinetCloudBlueprint</span> <span class="o">--</span><span class="n">query</span> <span class="n">properties</span><span class="o">.</span><span class="n">outputs</span>
+</span></code></pre></div>
+<p><a class="glightbox" href="../img/BicepOutputviaFGT.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/BicepOutputviaFGT.png" /></a></p>
+<p>Log in to DVWA using the credentials <strong>admin</strong> and <strong>password</strong>.</p>
+<p><a class="glightbox" href="../img/dvwalogin.PNG" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/dvwalogin.PNG" /></a></p>
+<p>Navigate to the <strong>SQL Injection</strong> menu item and type:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&#39; OR 1=1#
+</span></code></pre></div>
+<p><a class="glightbox" href="../img/dvwaSQLi.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/dvwaSQLi.png" /></a></p>
+<p>Notice the attack was not prevented.</p>
+<p><a class="glightbox" href="../img/dvwaSQLi-Result.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/dvwaSQLi-Result.png" /></a></p>
+<p><strong>Why?</strong> After the NSG permitted access to the DVWA Workload on Port 80 (HTTP) no subsequent inspection occured.</p>
+</details>
+<h2 id="accessing-dvwa-via-fortigate">Accessing DVWA via FortiGate</h2>
+<p>Now, we will execute the same attack, but this time, we will secure the DVWA Workload behind the FortiGate Firewall.</p>
+<details class="note">
+<summary>Testing SQL Injection Attack</summary>
+<p>Log in to the Primary FortiGate using the credentials you established during deployment.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">az</span> <span class="n">deployment</span> <span class="n">group</span> <span class="n">show</span> <span class="o">-</span><span class="n">g</span>  <span class="nd">@RESOURCE_GROUP_NAME</span> <span class="o">-</span><span class="n">n</span> <span class="n">fortinetCloudBlueprint</span> <span class="o">--</span><span class="n">query</span> <span class="n">properties</span><span class="o">.</span><span class="n">outputs</span>
+</span></code></pre></div>
+<p><a class="glightbox" href="../img/BicepOutputAccessFGT.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/BicepOutputAccessFGT.png" /></a></p>
+<p>Once logged in to the FortiGate, edit the firewall policy named <strong>DVWA-HTTP-Inbound_Access</strong>. Enable all the security profiles with their default settings.</p>
+<p><a class="glightbox" href="../img/firewallPolicyToggle.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/firewallPolicyToggle.png" /></a></p>
+<p>Click OK to apply the changes.</p>
+<p>Browse again to <a href="http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/vulnerabilities/sqli/" target="_blank">http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/vulnerabilities/sqli/</a> and enter this <strong>SQL injection</strong> attack into the form.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="s1">&#39; OR 1=1#</span>
+</span></code></pre></div>
+<p><a class="glightbox" href="../img/dvwaSQLi.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/dvwaSQLi.png" /></a></p>
+<p>Notice that the page is hung.</p>
+<p>Let's dive deeper and look at the FortiGate's Log. Open the <strong>Security Events</strong>, select the <strong>Logs</strong> tab and use the <strong>Intrusion Prevention</strong> filter.</p>
+<p><a class="glightbox" href="../img/securityEventsIPSLog.PNG" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/securityEventsIPSLog.PNG" /></a></p>
+<p><strong>Why was this attack dropped?</strong> The attack triggered a signature set to block within the FortiGate's IPS Security Profile.</p>
+</details>
+<details class="note">
+<summary>Testing Command Injection Attack</summary>
+<p>Now lets try a <strong>Command Injection</strong> attack.</p>
+<p>Browse to <a href="http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/vulnerabilities/exec/" target="_blank">http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/vulnerabilities/exec/</a> and enter this <strong>Command injection</strong> attack into the form.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">;</span><span class="n">ps</span> <span class="n">aux</span>
+</span></code></pre></div>
+<p><a class="glightbox" href="../img/dvwaCommandInjection.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/dvwaCommandInjection.png" /></a></p>
+<p><strong>Why was the attack let through?</strong> The attack did not match a known IPS signature. Let's enhance the capabilities of the FortiGate by activating the <strong>Web Application Firewall</strong> security profile.</p>
+</details>
+<details class="note">
+<summary>Enable WAF on FortiGate</summary>
+<p>Enable the <strong>Web Application Firewall</strong> Security Profile from <code>System -&gt; Feature Visibility</code></p>
+<p><a class="glightbox" href="../img/fortigateWAF.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/fortigateWAF.png" /></a></p>
+<p>Once enabled, go back to the <strong>Firewall Policy</strong> and edit the <strong>DVWA-HTTP-Inbound_Access</strong> Firewall Policy.</p>
+<p>Toggle the <strong>Inspection Mode</strong> to <strong>Proxy-Based</strong> and enable the default <strong>Web Application Firewall</strong> Security Profile.</p>
+<p><a class="glightbox" href="../img/fortigateWAFRule.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/fortigateWAFRule.png" /></a></p>
+<p>Browse to <a href="http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/vulnerabilities/exec/" target="_blank">http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/vulnerabilities/exec/</a> and enter the <strong>Command injection</strong> attack again.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">;</span><span class="n">ps</span> <span class="n">aux</span>
+</span></code></pre></div>
+<p>The <strong>Command Injection</strong> should now be prevented.</p>
+<p><a class="glightbox" href="../img/WAFDrop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/WAFDrop.png" /></a></p>
+<p>The attack is blocked because WAF signatures have been activated.</p>
+</details>
+<details class="note">
+<summary>Conclusion</summary>
+<p>Did you notice that all of the attacks stopped by the FortiGate were all stopped based on existing signatures?</p>
+</details>
+<h2 id="demonstrating-non-signature-based-attacks-via-fortigate">Demonstrating non-signature based attacks via FortiGate</h2>
+<p>In this section, we will demonstrate various web application attacks to showcase and highlight the significance of the protections the Fortiweb will bring when compared to it's Next Generation Firewall counterpart.</p>
+<h3 id="csrf-attack-via-fortigate">CSRF Attack via FortiGate</h3>
+<details class="question">
+<summary>What is Cross site request forgery (CSRF) attack?</summary>
+<p>Cross-Site Request Forgery (CSRF) is a type of security vulnerability that dupes a web browser into executing an undesired action within an authenticated application.</p>
+<p>The attack usually involves deceptive social engineering tactics, such as sending a misleading email or link to the victim. Because the user is already authenticated within the application when the attack occurs, it becomes challenging to differentiate between legitimate and fraudulent requests.</p>
+<p><a class="glightbox" href="../img/CSRF-Attack.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/CSRF-Attack.png" /></a></p>
+</details>
+<details class="note">
+<summary>Authenticating to the Web Application</summary>
+<p>To successfully run the CSRF Attack, you must first authenticate yourself within the application.</p>
+<p>Browse to <a href="http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com" target="_blank">http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com</a> and log in using the username <strong>admin</strong> and password <strong>password</strong>.</p>
+<details class="tip">
+<summary>Troubleshooting - If you encounter any authentication issues</summary>
+<ul>
+<li>
+<p>Browse to <a href="http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/setup.php" target="_blank">http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/setup.php</a></p>
+</li>
+<li>
+<p>Click on <strong>Create / Reset Database</strong></p>
+</li>
+</ul>
+<p><a class="glightbox" href="../img/Aspose.Words.fc7ec648-3633-4466-b24a-e7a2902fc6a3.006.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/Aspose.Words.fc7ec648-3633-4466-b24a-e7a2902fc6a3.006.png" /></a></p>
+</details>
+</details>
+<details class="note">
+<summary>Executing CSRF Attack</summary>
+<p>Once authenticated to DVWA, click on the <a href="http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/vulnerabilities/csrf/?password_new=pwned&password_conf=pwned&Change=Change#" target="_blank"><strong>LINK</strong></a> bellow to generate the attack.</p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/outlook-logo.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/outlook-logo.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dear user</strong>, <br> All Hotmail customers have been upgraded to Outlook.com. Your Hotmail Account services has expired. <br> Due to our new system upgrade to Outlook. In order for it to remain active <br> follow the <a href="http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/vulnerabilities/csrf/?password_new=pwned&password_conf=pwned&Change=Change#" target="_blank"><strong>LINK</strong></a> Sign in Re-activate your account to Outlook. <br> Thanks, <br> The Microsoft account team</td>
+</tr>
+</tbody>
+</table>
+<p>The link employs <strong>Cross-Site Request Forgery</strong> to exploit your authenticated session in order to initiate a password change.</p>
+<p><a class="glightbox" href="../img/DVWA-CSRF-Password-Change.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/DVWA-CSRF-Password-Change.png" /></a></p>
+<p>Your password has been changed without your knowledge.</p>
+<p>Logout of DVWA and Log back in using <code>admin:pwned</code></p>
+</details>
+<details class="note">
+<summary>Reseting the database for the next Lab</summary>
+<ul>
+<li>Browse to <a href="http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/setup.php" target="_blank">http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/setup.php</a></li>
+<li>Click on <strong>Create / Reset Database</strong></li>
+<li>You can now login with the original password</li>
+</ul>
+<p><a class="glightbox" href="../img/Aspose.Words.fc7ec648-3633-4466-b24a-e7a2902fc6a3.006.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/Aspose.Words.fc7ec648-3633-4466-b24a-e7a2902fc6a3.006.png" /></a></p>
+</details>
+<details class="note">
+<summary>Conclusion</summary>
+<p>We have observed that FortiGate provides an additional layer of protection compared to NSGs, thanks to its WAF signatures. However, we can see that more advanced attacks like CSRF are not addressed by FortiGate.</p>
+</details>
+<h3 id="cookie-poisoning-via-fortigate">Cookie Poisoning via FortiGate</h3>
+<details class="question">
+<summary>What is Cookie Poisoning?</summary>
+<p>In this lab, we will delve into the world of cookies - data stored in a user's browser that is specific to a website and session. These cookies serve a variety of purposes, from tracking user behavior to personalizing the online experience. However, they are also susceptible to cookie poisoning, a form of unauthorized manipulation by attackers aiming to gain access to sensitive information or services. This is particularly concerning because cookies often contain authentication data and other sensitive details, making them a prime target for hackers. </p>
+</details>
+<details class="note">
+<summary>Changing Security Level Through Legitimate Web App Interactions</summary>
+<p>Browse to <a href="http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/security.php" target="_blank">@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/security.php</a></p>
+<p>Right click the page and select <strong>Inspect</strong>, go to <strong>Storage</strong> (Firefox) or <strong>Application</strong> (Chrome, Edge) and select <strong>Cookies</strong>.</p>
+<p><a class="glightbox" href="../img/Aspose.Words.fc7ec648-3633-4466-b24a-e7a2902fc6a3.052.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/Aspose.Words.fc7ec648-3633-4466-b24a-e7a2902fc6a3.052.png" /></a></p>
+<p>The security level granted to the user is stored in the cookie.</p>
+<p>From the <strong>Web page</strong>, select <strong>Medium</strong> and click <strong>submit</strong>. This is a legitimate action, and your security level has changed.</p>
+<p><a class="glightbox" href="../img/Aspose.Words.fc7ec648-3633-4466-b24a-e7a2902fc6a3.053.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/Aspose.Words.fc7ec648-3633-4466-b24a-e7a2902fc6a3.053.png" /></a></p>
+</details>
+<details class="note">
+<summary>Overriding Security Level with Malicious Cookie Manipulation</summary>
+<p>Instead, now change the <strong>security cookie</strong> value manually to <strong>low</strong> and <strong>reload</strong> the page.</p>
+<p><a class="glightbox" href="../img/Aspose.Words.fc7ec648-3633-4466-b24a-e7a2902fc6a3.052.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/Aspose.Words.fc7ec648-3633-4466-b24a-e7a2902fc6a3.052.png" /></a></p>
+<p>Notice we were able change the DVWA's security setting by tampering with the value of the <strong>security cookie</strong>.</p>
+</details>
+<h3 id="hidden-fields-manipulation-via-fortigate">Hidden Fields Manipulation via FortiGate</h3>
+<details class="question">
+<summary>What is Hidden Fields</summary>
+<p>Hidden form inputs are often written into an HTML page by the web server when it serves that page to the client and are not visible on the rendered web page. Because HTTP is essentially stateless, like cookies, hidden form inputs are one way that web applications can use to remember session data from one page request to the next (called “persistence”).</p>
+<p>Since they are not rendered visible, hidden inputs are sometimes erroneously perceived as safe. But like session cookies, hidden form inputs store the software’s state information client-side, instead of server-side. This makes it vulnerable.</p>
+</details>
+<details class="note">
+<summary>Enforcing File Size Limitations – Successfully Blocking a Large File Upload</summary>
+<p>Download those 2 images to your computer:</p>
+<ul>
+<li><a href="../download/small.png">Small Image</a> (14Ko)</li>
+<li><a href="../download/large.png">Large Image</a> (433Ko)</li>
+</ul>
+<p>Go to <a href="http://@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/vulnerabilities/upload" target="_blank">@PREFIX-fgt-to-dvwa.@REGION.cloudapp.azure.com/vulnerabilities/upload</a> and upload the two images one at a time.</p>
+<p><a class="glightbox" href="../img/Aspose.Words.fc7ec648-3633-4466-b24a-e7a2902fc6a3.079.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/Aspose.Words.fc7ec648-3633-4466-b24a-e7a2902fc6a3.079.png" /></a></p>
+<p>The website enforces a policy that prohibits the uploading of images larger than 100 KB. Let's see how we can bypass the policy restrictions.</p>
+</details>
+<details class="note">
+<summary>Bypassing Policy Restrictions to Upload a Large File</summary>
+<p>Right click the page, select <strong>Inspect</strong>, go to <strong>Inspector</strong> tab (Firefox) or <strong>Element</strong> tab (Chrome, Edge) and find the <strong>MAX_FILE_SIZE</strong> hidden form.</p>
+<p><a class="glightbox" href="../img/Aspose.Words.fc7ec648-3633-4466-b24a-e7a2902fc6a3.080.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/Aspose.Words.fc7ec648-3633-4466-b24a-e7a2902fc6a3.080.png" /></a></p>
+<p>Change the value to <strong>500,000</strong> and try to upload the large image again. Notice you were now able to successfully upload the larger file.</p>
+</details>
+<details class="note">
+<summary>Conclusion</summary>
+<p>In summary, though the FortiGate is not inherently bound to the use of signatures, many functionalities revolving around Web Applications, IPS and AV are. This means, for attacks that do not have a corresponding signature, the FortiGate will be vulnerable to many unknown attacks.</p>
+</details>
+<p>In the next lab, we will evaluate FortiWeb and explore how to comprehensively protect a web application.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>To view the WAF Feature Comparison between FortiWeb and FortiGate, navigate to the <a href="../architecture/">Reference Architecture</a> section.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../start-deploy/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Deploying Your Lab Environment in Azure">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Deploying Your Lab Environment in Azure
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../hol-fwb-lab-2/" class="md-footer__link md-footer__link--next" aria-label="Next: Lab 2 - FortiWeb">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Lab 2 - FortiWeb
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Try and be nice
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.af256bd8.min.js"></script>
+      
+        <script src="../javascripts/extra.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(() => { lightbox.reload() });
-</script></body> </html>
+</script></body>
+</html>
