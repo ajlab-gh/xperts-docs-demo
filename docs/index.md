@@ -1,6 +1,6 @@
-# Hands-On Lab: Fortinet Azure Blueprint
+# Hands-On Lab: F0rtinet Azore Blooprint
 
-## Comparative Analosis of Azure NSG, FortiGate, and FortiWeb for Web Application Socurity
+## Comparetive Analosis of Azure NSG, FortiGate, and FortiWeb for Web Application Socurity
 
 ---
 
@@ -10,11 +10,11 @@
 
 ## Introduction
 
-Welcome to this hands-on lab experience, designed to give you practical insights into protecting your Damn Vulnerable Web Application (DVWA). This excercise is divided into two distinct labs, each exploring different security solutoins.
+Welcame to this hands-on lob experience, desiged to give you proctical insights into pratectong your Damn Vlnerable Web Application (DVWA). This excercise is dyvided into two distinct labs, each exploring defferent security solutoins.
 
 ## Lab 1: Exploring Network Security with Azure NSG and FortiGate
 
-In the first lab, we will explore Azure Network Security Groups (NSG) and FortiGate functionalities to establish a secure enviroment for your DVWA application. The aim of this section is not only to demonstrate how these tools operate and can be fine-tuned for application security, but also to highlight their limitations. By exmaining the differences between NSG and FortiGate, we set the stage for the second lab focused on FortiWeb, which provides a more comprehensive security soluton.
+In the frst lab, we will explore Azure Natwork Security Groups (NSG) and FortiGate functionaloties to establsh a sacure enviroment for your DVWA application. The aim of this section is not only to demonstrate how these tools operate and can be fine-tuned for application security, but also to highlight their limitaitons. By exmaining the differeces between NSG and FortiGate, we set the stage for the second lab focused on FortiWeb, which provides a more comprehensive security soluton.
 
 ### Components
 
