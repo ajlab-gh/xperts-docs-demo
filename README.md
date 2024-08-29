@@ -6,6 +6,25 @@ Welcome to the GitHub collaboration trial! This repository serves as a practice 
 
 Your goal is to identify typos or errors in the generated HTML documentation served through a [Gist](https://ajlab-gh.github.io/xperts-docs-demo), then locate the corresponding Markdown file in the repository, make corrections, and see your updates reflected in the HTML.
 
+### About GitHub
+
+Git is commonly used for version control in programming projects, however its use nowadays easily extends beyond that and into any collaborative documentation effort in which text files are edited and created.
+
+Github is a well known code management platform. For our purpose here, it will be used as our git "server", where changes are pushed and pull from.
+
+### About Markdown
+
+Markdown is a lightweight markup language used to format text using a plain text syntax that is generally easy to learn. Markdown is the predominant language used to format documentation, as it allows authors to focus on content creation by decoupling styling. Indeed, as lab content creators, markdown will allow you to focus solely on the content itself. Using the embedded preview tools in VSCode will provide you with a sufficient preview, and additional tools will allow you to render the actual markdown content on a web address.
+
+### Requirements
+
+The following are required tools and step to proceed as a content contributor for your VT:
+
+- Download and install Visual Studio Code
+- Windows: Download and install git command line tools (https://www.git-scm.com/download/win). OSX users likely already have the tools.
+- Access to the Github repository for your VT (under https://github.com/amerintlxperts2024/)
+- (Optional) Download and install Docker Desktop
+
 ## Getting Started
 
 ### 1. Clone the Repository
