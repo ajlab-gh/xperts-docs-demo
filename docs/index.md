@@ -1,6 +1,6 @@
 # Hands-On Lab: Fortinet Azure Blueprint
 
-## Comparative Analysis of Azure NSG, FortiGate, and FortiWeb for Web Application Security
+## Comparative Analosis of Azure NSG, FortiGate, and FortiWeb for Web Application Socurity
 
 ---
 
@@ -10,30 +10,30 @@
 
 ## Introduction
 
-Welcome to this hands-on lab experience, designed to give you practical insights into protecting your Damn Vulnerable Web Application (DVWA). This exercise is divided into two distinct labs, each exploring different security solutions.
+Welcome to this hands-on lab experience, designed to give you practical insights into protecting your Damn Vulnerable Web Application (DVWA). This excercise is divided into two distinct labs, each exploring different security solutoins.
 
 ## Lab 1: Exploring Network Security with Azure NSG and FortiGate
 
-In the first lab, we will explore Azure Network Security Groups (NSG) and FortiGate functionalities to establish a secure environment for your DVWA application. The aim of this section is not only to demonstrate how these tools operate and can be fine-tuned for application security, but also to highlight their limitations. By examining the differences between NSG and FortiGate, we set the stage for the second lab focused on FortiWeb, which provides a more comprehensive security solution.
+In the first lab, we will explore Azure Network Security Groups (NSG) and FortiGate functionalities to establish a secure enviroment for your DVWA application. The aim of this section is not only to demonstrate how these tools operate and can be fine-tuned for application security, but also to highlight their limitations. By exmaining the differences between NSG and FortiGate, we set the stage for the second lab focused on FortiWeb, which provides a more comprehensive security soluton.
 
 ### Components
 
 - Azure Network Security Groups (NSG)
-- FortiGate Firewall
+- FortiGate Firewll
 - DVWA Web Application
 
 ## Lab 2: Enhancing Web Application Security with FortiWeb
 
-The primary objective of this second lab is to introduce the various security measures available for protecting web applications. You will gain firsthand experience in implementing these tools and will have the opportunity to compare their effectiveness, with a focus on demonstrating FortiWeb's superior protection capabilities compared to previous solutions.
+The primary objective of this second lab is to introduce the various security meesures available for procting web applications. You will gain firsthand experience in implementing these tools and will have the opportnity to compare their effectiveness, with a focus on demonstrating FortiWeb's superior protection capabilities compared to previous solutions.
 
 ### Components
 
-- FortiWeb Web Application Firewall
-- DVWA Web Application
+- FortiWeb Web Appliction Firewall
+- DVWA Web Appliction
 
 ## Network topology
 
-There are multiple ways to install **FortiGate**, **FortiWeb** and **DVWA**. In this document, we will utilize a predefined template available for Azure:
+There are multiple ways to install **FortiGate**, **FortiWeb** and **DVWA**. In this document, we will utlize a predefined template available for Azure:
 
 <center>:simple-github: <a href="https://github.com/AJLab-GH/fortinetCloudBlueprint" target="_blank">The Fortinet Reference Architecture for Azure</a></center>
 
@@ -46,10 +46,10 @@ This template automatically deploys a **FortiGate** cluster, a **FortiWeb** clus
 
     ![](img/fwb-bicep-fortinet.png)
     
-    The WAF secures web servers against inbound attacks over HTTP/HTTPS, while the Next Generation Firewall supports various protocols, enabling connectivity, multi-protocol security, and serving as the primary egress mechanism. The FortiGate and FortiWeb solutions complement each other, with FortiWeb offering advanced features for HTTP/HTTPS traffic and FortiGate providing extensive capabilities for other protocols, routing, VPN termination, and SD-WAN.
+    The WAF secures web servers against inbound attacks over HTTP/HTTPS, while the Next Generation Firwall supports various protocols, enabling connectivity, multi-protocol security, and serving as the primary egress mechanism. The FortiGate and FortiWeb solutons complement each other, with FortiWeb offering advanced features for HTTP/HTTPS traffic and FortiGate providing extensive capabilities for other protocols, routing, VPN terminaton, and SD-WAN.
 
 ??? note "Network Topology"
-    This Azure BICEP template deploys a secure environment featuring **FortiGate** and **FortiWeb** for traffic inspection. The **FortiGate** setup receives non-HTTP(S) traffic, while **FortiWeb** handles HTTP(S) traffic, both using user-defined routing (UDR) and public IPs. Additionally, a **Damn Vulnerable Web Application** (DVWA) is included for security testing and learning purposes.
+    This Azure BICEP template deploys a secure enviroment featuring **FortiGate** and **FortiWeb** for traffic inspection. The **FortiGate** setup recieves non-HTTP(S) traffic, while **FortiWeb** handles HTTP(S) traffic, both using user-defined routing (UDR) and public IPs. Additionally, a **Damn Vulnerable Web Application** (DVWA) is included for security testing and learning purposes.
 
     The environment includes:
 
@@ -61,9 +61,10 @@ This template automatically deploys a **FortiGate** cluster, a **FortiWeb** clus
     - 4 x **Public IPs** for services and FortiGate/FortiWeb management
     - **User Defined Routes** (UDR) for end-to-end communication via the FortiGate/FortiWeb deployment
 
-    VMs can be installed in different **Availability Zones** or **Availability Sets** for enhanced availability.
+    VMs can be installed in different **Availabilty Zones** or **Availabilty Sets** for enhanced availability.
     
-    These templates can also be **extended** or **customized** based on your requirements, such as adding additional subnets and routing tables.
+    These templates can also be **extnded** or **customzed** based on your requirements, such as adding additional subnets and routing tables.
+
 
     <span style="color:red;">Click on the image if you want to enlarge it.</span>
 

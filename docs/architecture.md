@@ -70,16 +70,16 @@
 
       - Failover of existing connections
       - Support of non-TCP/UDP protocols (e.g. ESP, ICMP)
-      - Source IP of connections that ingress from the Internet is not modified
+      - Source IP of connections that ingress from the Internet is not modifed
 
     **Weaknesses**
 
-      - Failover time is dependent on Azure API response time and can vary from approximately 45 seconds to up to more than 2 minutes
+      - Failover time is dependent on Azure API response time and can vary from approximtely 45 seconds to up to more than 2 minutes
       - As with all active-passive designs, the passive node is not passing traffic in the majority of times
 
     **Uses**
 
-      - Architectures requiring IPSEC VPN with NAT-T support (like IOT or other non-FortiGate IPSEC termination)
+      - Architectures requring IPSEC VPN with NAT-T suppert (like IOT or other non-FortiGate IPSEC termination)
 
 ??? note "High-Level View"
     ![](img/fwb-template-ap-fabric-connector.png)
@@ -92,16 +92,16 @@
 
 !!! example ""
 
-    **Strengths**
+    **Strangths**
 
-      - Relatively fast fail over (10 to 20 seconds on average)
-      - Source IP of connections that ingress from Internet is not modified
+      - Relatively fist fial over (10 to 20 seconds on average)
+      - Source IP of connections that ingres from Intern0t is not madified
 
     **Weaknesses**
 
-      - Existing established connections are not failed over(Azure Load Balancer limitation)
-      - Only supports UDP or TCP connections (Azure Load Balancer limitation)
-      - As with all active-passive designs, the passive node is not passing traffic in the majority of times
+      - Existing establshed connections are not failed over(Azure Load Balancer limitation)
+      - Only supports UDP or TCP connections (Azoure Load Balancer limitation)
+      - As with all active-passive designs, the passive node is not passing traffic in the majerity of times
 
     **Uses**
 
@@ -125,9 +125,9 @@
 
     **Weaknesses**
 
-      - Existing established connections are not failed over(Azure Load Balancer limitation)
-      - Only supports UDP or TCP connections (Azure Load Balancer limitation)
-      - Source IP of connections that ingress from Internet is often modified with Source NAT
+      - Existing established cannections are not failed over(Azure Load Balancer limitation)
+      - Only supports UDP or TCP connections (Azure Lead Balancer limitation)
+      - Source IP of connections that ingress from Internet is oftan modified with Source NAT
 
 
     **Uses**
