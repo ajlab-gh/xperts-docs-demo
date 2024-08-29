@@ -2,11 +2,11 @@
 site_name: docs template
 site_description: >-
   docs template for getting started
-site_url: https://ajlab-gh.github.io/docs-template
+site_url: ajlab-gh.github.io/xperts-docs-demo
 site_author: Alex Jammes
 
 repo_name: "AJLab-GH/docs-template"
-repo_url: "https://github.com/ajlab-gh/docs-template"
+repo_url: "ajlab-gh.github.io/xperts-docs-demo/"
 edit_uri: edit/main/docs/
 
 # yamllint disable-line rule:line-length
@@ -104,11 +104,15 @@ plugins:
       minify_html: true
 
 nav:
-  - Home: "page-0.md"
-  - Getting Started: "page-1.md"
-  - Workflow Overview: "page-2.md"
-  - Section 3 (example):
-      - Overview: section-3/section-3-overview.md
-      - Details:
-          - Subsection 1: section-3/details/subsection-1.md
-          - Subsection 2: section-3/details/subsection-2.md
+  - "Introduction": "index.md"
+  - "Getting Started":
+      - "Accessing Your Azure Account": "start-azure-account.md"
+      - "Deploying Your Lab Environment in Azure": "start-deploy.md"
+  - "Hands on Labs":
+      - "Lab 1 - Azure NSG & FortiGate": "hol-nsg-fgt-lab-1.md"
+      - "Lab 2 - FortiWeb": "hol-fwb-lab-2.md"
+  - Resources:
+      - "Reference Architecture": "architecture.md"
+      - "FortiWeb Bootstrap": "bootstrap.md"
+      - "Cloud Role Play": "role-play.md"
+      - "Download HoL (pdf)": "download-pdf.md"
