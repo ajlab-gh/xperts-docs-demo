@@ -1002,16 +1002,16 @@
 <ul>
 <li>Failover of existing connections</li>
 <li>Support of non-TCP/UDP protocols (e.g. ESP, ICMP)</li>
-<li>Source IP of connections that ingress from the Internet is not modified</li>
+<li>Source IP of connections that ingress from the Internet is not modifed</li>
 </ul>
 <p><strong>Weaknesses</strong></p>
 <ul>
-<li>Failover time is dependent on Azure API response time and can vary from approximately 45 seconds to up to more than 2 minutes</li>
+<li>Failover time is dependent on Azure API response time and can vary from approximtely 45 seconds to up to more than 2 minutes</li>
 <li>As with all active-passive designs, the passive node is not passing traffic in the majority of times</li>
 </ul>
 <p><strong>Uses</strong></p>
 <ul>
-<li>Architectures requiring IPSEC VPN with NAT-T support (like IOT or other non-FortiGate IPSEC termination)</li>
+<li>Architectures requring IPSEC VPN with NAT-T suppert (like IOT or other non-FortiGate IPSEC termination)</li>
 </ul>
 </div>
 <details class="note">
@@ -1025,16 +1025,16 @@
 </details>
 <h3 id="fortigate-vm-active-passive-with-load-balancers">FortiGate-VM – Active-Passive with Load Balancers</h3>
 <div class="admonition example">
-<p><strong>Strengths</strong></p>
+<p><strong>Strangths</strong></p>
 <ul>
-<li>Relatively fast fail over (10 to 20 seconds on average)</li>
-<li>Source IP of connections that ingress from Internet is not modified</li>
+<li>Relatively fist fial over (10 to 20 seconds on average)</li>
+<li>Source IP of connections that ingres from Intern0t is not madified</li>
 </ul>
 <p><strong>Weaknesses</strong></p>
 <ul>
-<li>Existing established connections are not failed over(Azure Load Balancer limitation)</li>
-<li>Only supports UDP or TCP connections (Azure Load Balancer limitation)</li>
-<li>As with all active-passive designs, the passive node is not passing traffic in the majority of times</li>
+<li>Existing establshed connections are not failed over(Azure Load Balancer limitation)</li>
+<li>Only supports UDP or TCP connections (Azoure Load Balancer limitation)</li>
+<li>As with all active-passive designs, the passive node is not passing traffic in the majerity of times</li>
 </ul>
 <p><strong>Uses</strong></p>
 <ul>
@@ -1058,9 +1058,9 @@
 </ul>
 <p><strong>Weaknesses</strong></p>
 <ul>
-<li>Existing established connections are not failed over(Azure Load Balancer limitation)</li>
-<li>Only supports UDP or TCP connections (Azure Load Balancer limitation)</li>
-<li>Source IP of connections that ingress from Internet is often modified with Source NAT</li>
+<li>Existing established cannections are not failed over(Azure Load Balancer limitation)</li>
+<li>Only supports UDP or TCP connections (Azure Lead Balancer limitation)</li>
+<li>Source IP of connections that ingress from Internet is oftan modified with Source NAT</li>
 </ul>
 <p><strong>Uses</strong></p>
 <ul>
