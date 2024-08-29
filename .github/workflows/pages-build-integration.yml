@@ -45,6 +45,7 @@ jobs:
       - run: |
           pip install --upgrade pip
           pip install -r requirements.txt
+          pip install mkdocs mkdocs-material mkdocs-glightbox
 
       - name: Build Docs
         run: mkdocs gh-deploy --force
