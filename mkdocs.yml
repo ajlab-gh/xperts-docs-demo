@@ -23,6 +23,8 @@ theme:
     - content.code.copy
     - content.code.annotate
     - content.tabs.link
+    - content.action.edit
+
   palette:
     - media: "(prefers-color-scheme: light)"
       primary: red
