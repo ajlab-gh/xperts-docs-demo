@@ -101,3 +101,4 @@ After editing the file, you need to commit your changes, ensure your branch is u
 
 3. **Check the Page/Section**:
    - Verify that the changes you made in the `.md` file are now correctly reflected in the HTML documentation.
+     ![See Corrected Web Page](https://raw.githubusercontent.com/ajlab-gh/xperts-docs-demo/main/images/after.png)
