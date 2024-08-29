@@ -2,11 +2,11 @@
 site_name: docs template
 site_description: >-
   docs template for getting started
-site_url: ajlab-gh.github.io/xperts-docs-demo
+site_url: https://ajlab-gh.github.io/xperts-docs-demo
 site_author: Alex Jammes
 
 repo_name: "AJLab-GH/docs-template"
-repo_url: "ajlab-gh.github.io/xperts-docs-demo/"
+repo_url: "https://ajlab-gh.github.io/xperts-docs-demo/"
 edit_uri: edit/main/docs/
 
 # yamllint disable-line rule:line-length
