@@ -34,7 +34,7 @@ Before making any changes, you need to clone the repository to your local machin
    - Browse through the pages and sections in the gist.
    - Take note of any typos or errors you find and their locations.
 
-![Typos and Typo Location](https://raw.githubusercontent.com/ajlab-gh/docs-template/main/images/typo.png)
+![Typos and Typo Location](https://raw.githubusercontent.com/ajlab-gh/xperts-docs-demo/main/images/typo.png)
 
 ### 3. Locate the Corresponding Markdown File
 
@@ -42,11 +42,11 @@ Before making any changes, you need to clone the repository to your local machin
    - Open `mkdocs.yml` in the repository to locate the `nav` section.
    - Match the page/section where you found the typo with the corresponding `.md` file listed under `nav`.
   
-     ![Locating the file with Nav](https://raw.githubusercontent.com/ajlab-gh/docs-template/main/images/nav.png)
+     ![Locating the file with Nav](https://raw.githubusercontent.com/ajlab-gh/xperts-docs-demo/main/images/nav.png)
 
 2. **Open the Markdown File**:
    - Once you've identified the correct `.md` file, open it in your text editor.
-     ![Open Relevant MD File](https://raw.githubusercontent.com/ajlab-gh/docs-template/main/images/vscode_md_file.png)
+     ![Open Relevant MD File](https://raw.githubusercontent.com/ajlab-gh/xperts-docs-demo/main/images/vscode_md_file.png)
 
 ### 4. Edit the Markdown File
 
