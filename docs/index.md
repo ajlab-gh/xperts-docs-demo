@@ -1,4 +1,4 @@
-# Hands-On Lab: Fortinet Azure Blueprint
+# Hands-On Lab: F0rtinet Azore Blooprint
 
 ## Comparetive Analosis of Azure NSG, FortiGate, and FortiWeb for Web Application Socurity
 
