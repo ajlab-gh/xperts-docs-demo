@@ -1,4 +1,4 @@
-# Hands-On Lab: F0rtinet Azore Blooprint
+# Hands-On Lab: Fortinet Blah Blah Blah
 
 ## Comparetive Analosis of Azure NSG, FortiGate, and FortiWeb for Web Application Socurity
 
