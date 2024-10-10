@@ -1,6 +1,6 @@
-# Hands-On Lab: Fortinet blah blah 
+# Hands-On Lab: Fortinet Secure Cloud Blueprint
 
-## Comparetive Analosis of Azure NSG, FortiGate, and FortiWeb for Web Application Socurity
+## Comparetive Analysis of Azure NSG, FortiGate, and FortiWeb for Web Application Socurity
 
 ---
 
