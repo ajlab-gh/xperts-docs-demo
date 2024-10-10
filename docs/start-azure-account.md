@@ -5,6 +5,9 @@ This Hands-on-Lab is configured to allow each student to have their own training
 ??? note "Accessing the Azure Portal: Login Instructions"
     ##Accessing the Azure Portal
 
+    ![image](https://github.com/user-attachments/assets/1c667498-e4f1-492e-a80b-adf3e361f1cb)
+
+
     Browse to <a href="https://portal.azure.com" target="_blank">https://portal.azure.com</a>
 
     Use the credentials provided to you by your instructors.
