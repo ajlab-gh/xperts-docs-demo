@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../img/fortinet.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -1007,16 +1007,16 @@
 <ul>
 <li>Failover of existing connections</li>
 <li>Support of non-TCP/UDP protocols (e.g. ESP, ICMP)</li>
-<li>Source IP of connections that ingress from the Internet is not modifed</li>
+<li>Source IP of connections that ingress from the Internet is not modified</li>
 </ul>
 <p><strong>Weaknesses</strong></p>
 <ul>
-<li>Failover time is dependent on Azure API response time and can vary from approximtely 45 seconds to up to more than 2 minutes</li>
+<li>Failover time is dependent on Azure API response time and can vary from approximately 45 seconds to up to more than 2 minutes</li>
 <li>As with all active-passive designs, the passive node is not passing traffic in the majority of times</li>
 </ul>
 <p><strong>Uses</strong></p>
 <ul>
-<li>Architectures requring IPSEC VPN with NAT-T suppert (like IOT or other non-FortiGate IPSEC termination)</li>
+<li>Architectures requiring IPSEC VPN with NAT-T support (like IOT or other non-FortiGate IPSEC termination)</li>
 </ul>
 </div>
 <details class="note">
@@ -1030,16 +1030,16 @@
 </details>
 <h3 id="fortigate-vm-active-passive-with-load-balancers">FortiGate-VM – Active-Passive with Load Balancers</h3>
 <div class="admonition example">
-<p><strong>Strangths</strong></p>
+<p><strong>Strengths</strong></p>
 <ul>
-<li>Relatively fist fial over (10 to 20 seconds on average)</li>
-<li>Source IP of connections that ingres from Intern0t is not madified</li>
+<li>Relatively fast fail over (10 to 20 seconds on average)</li>
+<li>Source IP of connections that ingress from Internet is not modified</li>
 </ul>
 <p><strong>Weaknesses</strong></p>
 <ul>
-<li>Existing establshed connections are not failed over(Azure Load Balancer limitation)</li>
-<li>Only supports UDP or TCP connections (Azoure Load Balancer limitation)</li>
-<li>As with all active-passive designs, the passive node is not passing traffic in the majerity of times</li>
+<li>Existing established connections are not failed over(Azure Load Balancer limitation)</li>
+<li>Only supports UDP or TCP connections (Azure Load Balancer limitation)</li>
+<li>As with all active-passive designs, the passive node is not passing traffic in the majority of times</li>
 </ul>
 <p><strong>Uses</strong></p>
 <ul>
@@ -1063,9 +1063,9 @@
 </ul>
 <p><strong>Weaknesses</strong></p>
 <ul>
-<li>Existing established cannections are not failed over(Azure Load Balancer limitation)</li>
-<li>Only supports UDP or TCP connections (Azure Lead Balancer limitation)</li>
-<li>Source IP of connections that ingress from Internet is oftan modified with Source NAT</li>
+<li>Existing established connections are not failed over(Azure Load Balancer limitation)</li>
+<li>Only supports UDP or TCP connections (Azure Load Balancer limitation)</li>
+<li>Source IP of connections that ingress from Internet is often modified with Source NAT</li>
 </ul>
 <p><strong>Uses</strong></p>
 <ul>
@@ -1204,7 +1204,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.action.edit"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
       
         <script src="../javascripts/extra.js"></script>
       
